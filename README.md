@@ -4,7 +4,7 @@
 ###  (esto es solo orientativo)
 - Aqui se mosdtrara una plantilla del diseño de la pagina.
 - Tanto para movil como para escritori(pc).
-- Las medida a usar seran unas medidas de u n minimo de 384.
+- Las medida a usar seran unas medidas de un minimo de 384.
 - Se usaran fuentes agradables y colores calido.
 - Las letras estan en medidas EM.
 ## CATALOGO
@@ -18,12 +18,15 @@
 + + Ginetas
 + + Vozcas
 + + Vinos
++ + cervezas
++ + varios
 -  crae catalogo de comidas
 + + platos combinados
-+ + Menu de pizza
++ + Menu de pizzas
 + + Sandwich`s
 + + Bocadillos
 + + Entrantes
+- combinados
 - crear footer
 + + mapa
 + + redes
