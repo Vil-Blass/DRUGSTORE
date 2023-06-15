@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:duIr;
+    src: url(../fuentes/IrishGrover-Regular.ttf);
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.header_container{
+    width: 95%;
+}
+.title_header{
+    color: #FDCE6D;
+    font-size:5em;
+    font-family: duIr;
+    text-align: center;
+}
+.nav_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #FDCE6D;
+}
+
+.ul_nav{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+
+}
+.ul_nav li a{
+    text-decoration: none;
+    color: #000;
+background-color: #6dfd7b;
+    font-size: 1.5em;
+    font-family: duIr;
+}
