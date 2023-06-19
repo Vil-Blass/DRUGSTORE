@@ -3,29 +3,43 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 @font-face {
-    font-family:duIr;
+    font-family: duIr;
     src: url(../fuentes/IrishGrover-Regular.ttf);
 }
+
 .container {
     width: 100%;
-    height: 100vh;
-    display: flex;
+    height: 300vh;
+    display: block;
     justify-content: center;
     align-items: center;
-    flex-flow: column;
+ 
 }
-.header_container{
+
+.header_container {
     width: 95%;
+    height: 20vh;
 }
-.title_header{
+
+.title_header {
+    width: 100%;
+   padding-inline-start: 2%;
     color: #FDCE6D;
-    font-size:5em;
+    font-size: 5em;
     font-family: duIr;
     text-align: center;
     background-color: #0c6d16;
 }
-.nav_header{
+.singLogIn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   flex-flow: row;
+}
+.nav_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,37 +48,75 @@
     background-color: #FDCE6D;
 }
 
-.ul_nav{
+.ul_nav {
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 60%;
     height: 100%;
 
 }
-.ul_nav li a{
+
+.ul_nav li a {
     text-decoration: none;
     color: #ffffff;
-background-color: #0c6d16;
+    background-color: #0c6d16;
     font-size: 1.5em;
     font-family: duIr;
 }
+#fechaDia{       color: #ffffff;
+    background-color: #0c6d16;
+    font-size: 0.99em;
+    font-family: duIr;
+}
 
-.section_container{
+.registros {
+    /* display: none; */
+    width: 60%;
+    height: max-content;
+    background-color: #0c6d16;
+
+}
+
+.registros h1 {
+    color: #FDCE6D;
+    font-size: 2em;
+    font-family: duIr;
+    text-align: center;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_reg {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.form_reg input {
+    width: fit-content;
+    height: fit-content;
+}
+
+.section_container {
     width: 95%;
     height: 80vh;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     grid-gap: 1em;
 }
-.aside_container{
+
+.aside_container {
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    /* display: grid; */
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
 }
