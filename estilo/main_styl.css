@@ -23,6 +23,7 @@
     font-size:5em;
     font-family: duIr;
     text-align: center;
+    background-color: #0c6d16;
 }
 .nav_header{
     display: flex;
@@ -44,8 +45,26 @@
 }
 .ul_nav li a{
     text-decoration: none;
-    color: #000;
-background-color: #6dfd7b;
+    color: #ffffff;
+background-color: #0c6d16;
     font-size: 1.5em;
     font-family: duIr;
+}
+
+.section_container{
+    width: 95%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1em;
+}
+.aside_container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
 }

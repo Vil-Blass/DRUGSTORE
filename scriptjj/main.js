@@ -1,10 +1,10 @@
 //mostrar la hora y la fecha local en fechaDia
-const fechaDia =document.querySelector('#fechaDia')
+const fechaDia = document.querySelector('#fechaDia')
 // funcion de relog automatico
-setInterval(()=>{
+setInterval(() => {
     const fecha = new Date()
-    const diaSemana= fecha.getDay()
-    const diaSemanaTexto = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado']
+    const diaSemana = fecha.getDay()
+    const diaSemanaTexto = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']
     const dia = fecha.getDate()
     const mes = fecha.getMonth()
     const año = fecha.getFullYear()
@@ -17,6 +17,15 @@ setInterval(()=>{
     fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mes} del ${año} a las ${horaAMPM}`
 })
 
+listado = document.querySelectorAll('.listado')
+listado.forEach((elemento) => {
+    elemento.addEventListener('click', () => {
+        elemento.classList.toggle('active')
+    })
+})
+
+
+// listado zumos pago
 
 //crear carousel automatico con el array 
 let carousel = document.getElementById('carousel');
