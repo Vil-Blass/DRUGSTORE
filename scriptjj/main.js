@@ -23,6 +23,36 @@ setInterval(() => {
 localStorage.setItem('fechaDia', JSON.stringify(fechaDia));
 
 
+const entrando = document.querySelector('.entrando')
+const entrar = document.querySelector('.entrar')
+//displa block en hacer click en entrar
+entrar.addEventListener('click', function () {
+    if (entrando.style.display === 'none') {
+        entrando.style.display = 'block';
+    } else {
+        entrando.style.display = 'none';
+    }
+})
+
+const user = document.querySelector('.user');
+
+const pass = document.querySelector('.password');
+const aqui = document.querySelector('.aqui');
+
+aqui.addEventListener('click', () => {
+  //si ussr y pass son iguales a email y password
+  if (user.value == 'email' && pass.value == 'password') {
+    window.location.href = 'index.html';
+    alert('Hola, bienvenido!');
+    } else {
+    alert('Usuario o contraseña incorrectos');
+  }
+  
+    window.location.href = 'index.html';
+    alert('Hola, bienvenido!');
+});
+
+
 
 // listado zumos pago
 
@@ -62,51 +92,58 @@ localStorage.setItem('fechaDia', JSON.stringify(fechaDia));
 // );
 console.log('ESTOY')
 
+// crear un array para nuevo usuario
+const usuarios = [];
 
-    // crear un array para nuevo usuario
-    const usuarios = [];
-
-    const nombre = document.querySelector('.nombre');
-    const apellido = document.querySelector('.apellido');
-    const edad = document.querySelector('.edad')
-    const email = document.querySelector('.email');
-    const password = document.querySelector('.pass');
-    const password2 = document.querySelector('.pass');
-    const check = document.querySelector('.check');
-    const envio = document.querySelector('.envio');
-    // registrar usuaros 
-    envio.addEventListener('click', function () {
-        if (nombre.value == '' || apellido.value == '' || edad.value == '' || email.value == '' || password.value == '' || password2.value == '') {
-            alert('rellene todos los campos');
-        } else if (password.value != password2.value) {
-            alert('las contraseñas no coinciden');
-        } else if (check.checked == false) {
-            alert('acepte los terminos y condiciones');
-        } else {
-            alert('usuario registrado');
-            const usuario = {
-                nombre: nombre.value,
-                apellido: apellido.value,
-                edad: edad.value,
-                email: email.value,
-                password: password.value,
-            }
-            usuarios.push(usuario);
-            console.log(usuarios);
-            nombre.value = '';
-            apellido.value = '';
-            edad.value = '';
-            email.value = '';
-            password.value = '';
-            password2.value = '';
-            check.checked = false;
+const nombre = document.querySelector('.nombre');
+const apellido = document.querySelector('.apellido');
+const edad = document.querySelector('.edad')
+const email = document.querySelector('.email');
+const password = document.querySelector('.pass');
+const password2 = document.querySelector('.pass');
+const check = document.querySelector('.check');
+const envio = document.querySelector('.envio');
+// registrar usuaros 
+envio.addEventListener('click', function () {
+    if (nombre.value == '' || apellido.value == '' || edad.value == '' || email.value == '' || password.value == '' || password2.value == '') {
+        alert('rellene todos los campos');
+    } else if (password.value != password2.value) {
+        alert('las contraseñas no coinciden');
+    } else if (check.checked == false) {
+        alert('acepte los terminos y condiciones');
+    } else {
+        alert('usuario registrado');
+        const usuario = {
+            nombre: nombre.value,
+            apellido: apellido.value,
+            edad: edad.value,
+            email: email.value,
+            password: password.value,
         }
-        //guadar en sesion
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        //recuperar
-        const usuariosRecuperados = JSON.parse(localStorage.getItem('usuarios'));
-        console.log(usuariosRecuperados + '          SIIIIII');
-    })
+
+        usuarios.push(usuario);
+        console.log(usuarios);
+        nombre.value = '';
+        apellido.value = '';
+        edad.value = '';
+        email.value = '';
+        password.value = '';
+        password2.value = '';
+        check.checked = false;
+    }
+    //guadar en sesion
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    //recuperar
+    const usuariosRecuperados = JSON.parse(localStorage.getItem('usuarios'));
+    console.log(usuariosRecuperados + '          SIIIIII');
+
+    //si es todo correcto llevar al index
+    if (usuariosRecuperados) {
+        window.location.href = './index.html';
+    }
+})
+//guardar en local
+localStorage.setItem('envio', JSON.stringify(envio));
 
 
 
@@ -118,7 +155,16 @@ console.log('ESTOY')
 
 
 
-// //exportar
-// export default laHora;
 
 
+
+
+
+
+
+
+
+
+
+
+//codeium //
