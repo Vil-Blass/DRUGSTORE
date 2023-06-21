@@ -1,3 +1,6 @@
+
+
+
 //mostrar la hora y la fecha local en fechaDia
 const fechaDia = document.querySelector('#fechaDia')
 // funcion de relog automatico
@@ -16,19 +19,16 @@ setInterval(() => {
     const horaAMPM = hora12 + ':' + minutos + ':' + segundos + ' ' + ampm
     fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mes} del ${año} a las ${horaAMPM}`
 })
+//guardar en local
+localStorage.setItem('fechaDia', JSON.stringify(fechaDia));
 
-listado = document.querySelectorAll('.listado')
-listado.forEach(element => {
-    element.addEventListener('click', () => {
-        element.classList.toggle('active')
-    })
-})
+
 
 // listado zumos pago
 
 // //crear carousel automatico con el array 
-// let carousel = document.getElementById('carousel');
-// let img = document.createElement('img');
+// const carousel = document.querySelector('carousel');
+// const img = document.createElement('img');
 // img.setAttribute('id', 'img');
 // img.setAttribute('class', 'img');
 // img.setAttribute('src', juegos[0]);
@@ -36,7 +36,7 @@ listado.forEach(element => {
 //  img.style.height = '100%';
 
 // //cambiar imagenes automaticamente
-// let i = 0;
+// const i = 0;
 // setInterval( ()=> {
 //     if (i < juegos.length - 1) {
 //         i++;
@@ -62,98 +62,52 @@ listado.forEach(element => {
 // );
 console.log('ESTOY')
 
-// crear un array para nuevo usuario
-let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-// registrar usuarios 
-function registrar() {
-    let nombre = document.querySelector('.last')
-    let apellidos = document.querySelector('.first')
-    let años = document.querySelector('.years')
-    let email = document.querySelector('.email')
-    let password = document.querySelector('.pass')
-    let check = document.querySelector('.check')
-    let texto=document.querySelector('.text')
+    // crear un array para nuevo usuario
+    const usuarios = [];
 
-    let usuario = {
-        nombre: nombre.value,
-        apellidos: apellidos.value,
-        años: años.value,
-        email: email.value,
-        password: password.value
-    };
-    usuarios.push(usuario);
-    console.log(usuarios);
-
-    let envio = document.querySelector('.envio')
-    envio.addEventListener('click', () => {
-        // index
-        window.location.href = 'index.html';
-    });
-    alert('Usuario registrado correctamente');
-
-    // Agregar event listener al checkbox
-    check.addEventListener('change', function() {
-        if (this.checked) {
-            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    const nombre = document.querySelector('.nombre');
+    const apellido = document.querySelector('.apellido');
+    const edad = document.querySelector('.edad')
+    const email = document.querySelector('.email');
+    const password = document.querySelector('.pass');
+    const password2 = document.querySelector('.pass');
+    const check = document.querySelector('.check');
+    const envio = document.querySelector('.envio');
+    // registrar usuaros 
+    envio.addEventListener('click', function () {
+        if (nombre.value == '' || apellido.value == '' || edad.value == '' || email.value == '' || password.value == '' || password2.value == '') {
+            alert('rellene todos los campos');
+        } else if (password.value != password2.value) {
+            alert('las contraseñas no coinciden');
+        } else if (check.checked == false) {
+            alert('acepte los terminos y condiciones');
         } else {
-            localStorage.removeItem('usuarios');
+            alert('usuario registrado');
+            const usuario = {
+                nombre: nombre.value,
+                apellido: apellido.value,
+                edad: edad.value,
+                email: email.value,
+                password: password.value,
+            }
+            usuarios.push(usuario);
+            console.log(usuarios);
+            nombre.value = '';
+            apellido.value = '';
+            edad.value = '';
+            email.value = '';
+            password.value = '';
+            password2.value = '';
+            check.checked = false;
         }
-    });
-    //no guardar texto en local
-    texto.value='';
-
-}
-
-
-
-
-// crear funcion para logearse
-function logIn() {
-    //crear modal para usuarii y contraseña
-    let modal = document.createElement('div')
-    modal.setAttribute('class', 'modal')
-    let div = document.createElement('div')
-    div.setAttribute('class', 'modal-content')
-    let p = document.createElement('p')
-    p.setAttribute('class', 'close')
-    p.innerHTML = 'X'
-    modal.appendChild(div)
-    div.appendChild(p)
-
-    document.head.appendChild(modal)
-    // crear input usuario
-    let usuario = document.createElement('input')
-    usuario.setAttribute('required', 'true')
-    usuario.setAttribute('type', 'text')
-    usuario.setAttribute('placeholder', 'Usuario')
-    div.appendChild(usuario)
-    // crear input contraseña
-    let password = document.createElement('input')
-    password.setAttribute('required', 'true')
-    password.setAttribute('type', 'password')
-    password.setAttribute('placeholder', 'Contraseña')
-    div.appendChild(password)
-    // crear boton
-    let boton = document.createElement('button')
-    boton.setAttribute('type', 'submit')
-    boton.setAttribute('class', 'btn')
-    boton.innerHTML = 'Ingresar'
-    div.appendChild(boton)
-    boton.addEventListener('click', () => {
-        // su usuario y contraseca coincide
-        if (usuario.value == usuarios[0].email && password.value == usuarios[0].password) {
-            window.location.href = 'index.html'
-        }
-        else {
-            alert('Usuario o contraseña incorrectos')
-        }
-
+        //guadar en sesion
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        //recuperar
+        const usuariosRecuperados = JSON.parse(localStorage.getItem('usuarios'));
+        console.log(usuariosRecuperados + '          SIIIIII');
     })
 
-}
-
-let entrar = document.querySelector('.entrar')
 
 
 
@@ -164,10 +118,7 @@ let entrar = document.querySelector('.entrar')
 
 
 
-
-
-
-
-
+// //exportar
+// export default laHora;
 
 

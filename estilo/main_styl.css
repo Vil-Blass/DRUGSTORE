@@ -11,7 +11,7 @@
 
 .container {
     width: 100%;
-    height: 300vh;
+    height: 100vh;
     display: block;
     justify-content: center;
     align-items: center;
@@ -32,8 +32,7 @@
     text-align: center;
     background-color: #0c6d16;
 }
-
-.singLogIn {
+.singLogIn{
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -73,6 +72,38 @@
     background-color: #0c6d16;
     font-size: 0.99em;
     font-family: duIr;
+}
+.entrando{
+    display: none;
+    
+}
+
+.aside_log_in {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title_aside {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c6d16;
+}
+
+.form_login {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
 
 .section_container {
