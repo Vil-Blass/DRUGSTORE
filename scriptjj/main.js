@@ -63,9 +63,9 @@ listado.forEach(element => {
 console.log('ESTOY')
 
 // crear un array para nuevo usuario
-let usuarios = [];
+let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-// registrar usuaros 
+// registrar usuarios 
 function registrar() {
     let nombre = document.querySelector('.last')
     let apellidos = document.querySelector('.first')
@@ -73,30 +73,38 @@ function registrar() {
     let email = document.querySelector('.email')
     let password = document.querySelector('.pass')
     let check = document.querySelector('.check')
-    usuarios.push({
+    let texto=document.querySelector('.text')
+
+    let usuario = {
         nombre: nombre.value,
         apellidos: apellidos.value,
         años: años.value,
         email: email.value,
         password: password.value
-    });
+    };
+    usuarios.push(usuario);
+    console.log(usuarios);
 
-    localStorage.setItem('usuarios', JSON.stringify(usuarios))
-    console.log(usuarios)
-    //requerir check
-    if (check.checked) {
-        localStorage.setItem('usuarios', JSON.stringify(usuarios))
-    }
-    else {
-        localStorage.removeItem('usuarios')
-    }
-    let envio =document.querySelector('.envio')
+    let envio = document.querySelector('.envio')
     envio.addEventListener('click', () => {
-        //index
-        window.location.href = 'index.html'
-    })
-    alert('Usuario registrado correctamente')
+        // index
+        window.location.href = 'index.html';
+    });
+    alert('Usuario registrado correctamente');
+
+    // Agregar event listener al checkbox
+    check.addEventListener('change', function() {
+        if (this.checked) {
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        } else {
+            localStorage.removeItem('usuarios');
+        }
+    });
+    //no guardar texto en local
+    texto.value='';
+
 }
+
 
 
 
@@ -146,7 +154,7 @@ function logIn() {
 }
 
 let entrar = document.querySelector('.entrar')
-entrar.addEventListener('click', logIn)
+
 
 
 

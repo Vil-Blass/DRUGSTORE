@@ -15,7 +15,7 @@
     display: block;
     justify-content: center;
     align-items: center;
- 
+
 }
 
 .header_container {
@@ -25,20 +25,22 @@
 
 .title_header {
     width: 100%;
-   padding-inline-start: 2%;
+    padding-inline-start: 2%;
     color: #FDCE6D;
     font-size: 5em;
     font-family: duIr;
     text-align: center;
     background-color: #0c6d16;
 }
-.singLogIn{
+
+.singLogIn {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-   flex-flow: row;
+    flex-flow: row;
 }
+
 .nav_header {
     display: flex;
     justify-content: space-between;
@@ -65,41 +67,12 @@
     font-size: 1.5em;
     font-family: duIr;
 }
-#fechaDia{       color: #ffffff;
+
+#fechaDia {
+    color: #ffffff;
     background-color: #0c6d16;
     font-size: 0.99em;
     font-family: duIr;
-}
-
-.registros {
-    /* display: none; */
-    width: 60%;
-    height: max-content;
-    background-color: #0c6d16;
-
-}
-
-.registros h1 {
-    color: #FDCE6D;
-    font-size: 2em;
-    font-family: duIr;
-    text-align: center;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.form_reg {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-}
-
-.form_reg input {
-    width: fit-content;
-    height: fit-content;
 }
 
 .section_container {
@@ -119,4 +92,70 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
+}
+
+/* FORMULARIO */
+
+.container_form {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+.header_form{
+    width: 62%;
+    padding-inline-start: 2%;
+
+}
+
+.registros {
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+    height: max-content;
+    background-color: #0c6d16;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+
+
+}
+
+.registros h1 {
+
+    padding-inline-start: 2%;
+    color: #FDCE6D;
+    font-size: 2em;
+    font-family: duIr;
+    text-align: center;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_reg {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form_reg input {
+    width: fit-content;
+    height: fit-content;
+    margin: 5px;
+    font-size: 1.5em;
+    background-color: #FDCE6D;
+}
+
+.form_reg label {
+    width: fit-content;
+    height: fit-content;
+    margin: 5px;
+    font-size: 1.5em;
+    background-color: #FDCE6D;
 }
