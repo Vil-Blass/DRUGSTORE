@@ -40,21 +40,87 @@ const pass = document.querySelector('.password');
 const aqui = document.querySelector('.aqui');
 
 aqui.addEventListener('click', () => {
-  //si ussr y pass son iguales a email y password
-  if (user.value == 'email' && pass.value == 'password') {
-    window.location.href = 'index.html';
-    alert('Hola, bienvenido!');
+    //si ussr y pass son iguales a email y password
+    if (user.value == 'email' && pass.value == 'password') {
+        window.location.href = 'index.html';
+        alert('Hola, bienvenido!');
     } else {
-    alert('Usuario o contraseña incorrectos');
-  }
-  
+        alert('Usuario o contraseña incorrectos');
+    }
+
     window.location.href = 'index.html';
     alert('Hola, bienvenido!');
 });
 
 
 
-// listado zumos pago
+const jugos = [
+    "image/zumos/pago_ace.jpg",
+    "image/zumos/pago_arandano.jpg",
+    "image/zumos/pago_banana.jpg",
+    "image/zumos/pago_fresa.jpg",
+    "image/zumos/pago_lima_limon.jpg",
+    "image/zumos/pago_mango.jpg",
+    "image/zumos/pago_manzana.jpg",
+    "image/zumos/pago_melocoton.jpg",
+    "image/zumos/pago_naranja.jpg",
+    "image/zumos/pago_pera.jpg",
+    "image/zumos/pago_piña.jpg",
+    "image/zumos/pago_ponelo.jpg",
+    "image/zumos/pago_tomate.jpg",
+];
+
+const zumitos = document.querySelectorAll('.zumitos');
+
+
+document.addEventListener('mousemove', function (event) {
+    const img = document.querySelector('#img');
+    if (img) {
+        const x = event.clientX + 10;
+        const y = event.clientY;
+        img.style.position = 'absolute';
+        img.style.left = `${x}px`;
+        img.style.top = `${y}px`;
+    }
+});
+
+zumitos.forEach((zumito, index) => {
+    zumito.addEventListener('mouseenter', function () {
+        const img = document.createElement('img');
+        img.setAttribute('src', jugos[index]);
+        img.setAttribute('class', 'img');
+        img.setAttribute('id', 'img');
+        document.body.appendChild(img);
+        img.style.height = '15%';
+        img.style.width = '5%';
+        img.style.objectFit= "contain";
+        img.style.transition = 'all 1s';
+        img.style.transform = 'scale(1.2)';
+    });
+    
+
+    zumito.addEventListener('mousemove', function (event) {
+        const img = document.querySelector('#img');
+        if (img) {
+            const x = event.clientX + 100;
+            const y = event.clientY;
+            img.style.position = 'absolute';
+            img.style.left = `${x}px`;
+            img.style.top = `${y}px`;
+        }
+    });
+
+    zumito.addEventListener('mouseleave', function () {
+        const img = document.querySelector('#img');
+        if (img) {
+            document.body.removeChild(img);
+        }
+    });
+});
+
+
+
+
 
 // //crear carousel automatico con el array 
 // const carousel = document.querySelector('carousel');
