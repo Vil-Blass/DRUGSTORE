@@ -8,7 +8,7 @@
 
 .header_container { height: 15vh; }
 
-.title_header { height: 15vh; font-size: 2em; }
+.title_header { height: 15vh; font-size: 1em; }
 
 .nav_header { height: 7vh; margin: 0.1%; }
 
@@ -35,7 +35,9 @@
 .form_reg input { width: 60%; font-size: 0.6em; }
 
 .form_reg label { font-size: 0.6em; } }
-
+.figure{
+    width: 100%;
+}
 @font-face {
     font-family: duIr;
     src: url(../fuentes/IrishGrover-Regular.ttf);
