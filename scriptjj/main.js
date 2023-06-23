@@ -54,68 +54,106 @@ aqui.addEventListener('click', () => {
 
 
 
-const jugos = [
-    "image/zumos/pago_ace.jpg",
-    "image/zumos/pago_arandano.jpg",
-    "image/zumos/pago_banana.jpg",
-    "image/zumos/pago_fresa.jpg",
-    "image/zumos/pago_lima_limon.jpg",
-    "image/zumos/pago_mango.jpg",
-    "image/zumos/pago_manzana.jpg",
-    "image/zumos/pago_melocoton.jpg",
-    "image/zumos/pago_naranja.jpg",
-    "image/zumos/pago_pera.jpg",
-    "image/zumos/pago_piña.jpg",
-    "image/zumos/pago_ponelo.jpg",
-    "image/zumos/pago_tomate.jpg",
+const imgConsumibles = [
+    "image/zumos/pago_ace.jpg","image/zumos/pago_arandano.jpg","image/zumos/pago_banana.jpg","image/zumos/pago_fresa.jpg",
+    "image/zumos/pago_lima_limon.jpg","image/zumos/pago_mango.jpg","image/zumos/pago_manzana.jpg","image/zumos/pago_melocoton.jpg",
+    "image/zumos/pago_naranja.jpg","image/zumos/pago_pera.jpg","image/zumos/pago_piña.jpg","image/zumos/pago_ponelo.jpg",
+    "image/zumos/pago_tomate.jpg","image/refrescos/aquabona-manantial-pena-umbria.jpg","image/refrescos/aquabona-singular-manantial-pena-umbria.jpg",
+    "image/cafes/cafe-solo.jpg","image/cafes/cafe-con-leche.avif","image/cafes/cortado.jpg","image/cafes/cafe-con-hielo.jpg",
+    "image/cafes/cafe-bombon.jpg","image/cafes/carajillo.webp","image/cafes/cafe-irish.jpg","image/cafes/cafe-descafeinado.jpg",
+    "image/refrescos/7up.jpg","image/refrescos/coca-cola.jpg","image/refrescos/coca-cola_lignt.jpg",
+    "image/refrescos/coca-cola-zero.jpg","image/refrescos/coca-cola-zero-zero.jpg",
+    "image/refrescos/nestea-te-negro-al-limon.jpg","C:/Users/Usuario/Desktop/DRUGSTORE/image/refrescos/aquarius-limon.png",
+    "image/refrescos/aquarius-naranja-2022.jpg","image/refrescos/schweppes-tonica.png","image/refrescos/schweppes-limon.jpg",
+    "image/refrescos/schweppes-naranja.jpg","image/refrescos/mahou-00-tostada.jpg","",
+    "","","",
+    "","","",
 ];
 
-const zumitos = document.querySelectorAll('.zumitos');
-
+const consumibles = document.querySelectorAll('.consumibles');
 
 document.addEventListener('mousemove', function (event) {
+   
+    const figure = document.querySelector('.figure');
     const img = document.querySelector('#img');
-    if (img) {
+    const figcaption=document.querySelector('.figcaption');
+
+    if ( figure ) {
         const x = event.clientX + 10;
         const y = event.clientY;
-        img.style.position = 'absolute';
-        img.style.left = `${x}px`;
-        img.style.top = `${y}px`;
+        figure.style.position = 'absolute';
+        figure.style.left = `${x}px`;
+        figure.style.top = `${y}px`;
+        
     }
+  
+
+    
 });
 
-zumitos.forEach((zumito, index) => {
-    zumito.addEventListener('mouseenter', function () {
+consumibles.forEach((consumibles, index) => {
+    consumibles.addEventListener('mouseenter', function () {
+        //crear figure
+        const figure = document.createElement('figure');
+        figure.setAttribute('class', 'figure');
+        figure.setAttribute('id', 'figure');
+        document.body.appendChild(figure);
+        figure.style.position = 'absolute';
+        figure.style.transition = 'all 1s';
+        figure.style.zIndex = '1000';
+        figure.style.borderRadius = '10px';
+        figure.style.boxShadow = '0 0 10px #000';
+        figure.style.objectFit= "contain";
+        figure.style.height = '20%';
+        figure.style.width = '20%';
+        figure.style.display = 'flex';
+        figure.style.justifyContent = 'fitconten';
+        figure.style.alignItems = 'center';
+        figure.style.flexFlow = 'column';
+
+        
         const img = document.createElement('img');
-        img.setAttribute('src', jugos[index]);
+        img.setAttribute('src', imgConsumibles[index]);
         img.setAttribute('class', 'img');
         img.setAttribute('id', 'img');
-        document.body.appendChild(img);
-        img.style.height = '15%';
-        img.style.width = '5%';
+        figure.appendChild(img);
+        img.style.height = '75%';
+        img.style.width = '100%';
         img.style.objectFit= "contain";
+
         img.style.transition = 'all 1s';
-        img.style.transform = 'scale(1.2)';
+        img.style.transform = 'scale(1.5)';
+        img.style.borderRadius = '10px';
+        img.style.boxShadow = '0 0 10px #000';
+        
+        
+       const figcaption = document.createElement('figcaption');
+       figcaption.setAttribute('class', 'figcaption');
+       figcaption.innerHTML = imgConsumibles[index];
+       figure.appendChild(figcaption);
     });
     
+    
 
-    zumito.addEventListener('mousemove', function (event) {
+    consumibles.addEventListener('mousemove', function (event) {
         const img = document.querySelector('#img');
-        if (img) {
+        if (figure) {
             const x = event.clientX + 100;
             const y = event.clientY;
-            img.style.position = 'absolute';
-            img.style.left = `${x}px`;
-            img.style.top = `${y}px`;
+            figure.style.position = 'absolute';
+            figure.style.left = `${x}px`;
+            figure.style.top = `${y}px`;
         }
     });
 
-    zumito.addEventListener('mouseleave', function () {
-        const img = document.querySelector('#img');
-        if (img) {
-            document.body.removeChild(img);
+    consumibles.addEventListener('mouseleave', function () {
+        const figure = document.querySelector('.figure');
+        if (figure) {
+            document.body.removeChild(figure);figure
         }
     });
+  
+
 });
 
 
@@ -131,7 +169,7 @@ zumitos.forEach((zumito, index) => {
 // carousel.appendChild(img);
 //  img.style.height = '100%';
 
-// //cambiar imagenes automaticamente
+// //cambiar imgConsumibles automaticamente
 // const i = 0;
 // setInterval( ()=> {
 //     if (i < juegos.length - 1) {
@@ -208,7 +246,7 @@ envio.addEventListener('click', function () {
         window.location.href = './index.html';
     }
 })
-//guardar en local
+
 localStorage.setItem('envio', JSON.stringify(envio));
 
 
