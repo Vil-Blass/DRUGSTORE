@@ -3,16 +3,55 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Media Queries */
+@media only screen and (min-width: 384px) and (max-width: 4000px) { .container { height: 100vh; }
+
+.header_container { height: 15vh; }
+
+.title_header { height: 15vh; font-size: 4em; }
+
+.nav_header { height: 7vh; margin: 0.1%; }
+
+.ul_nav { width: 70%; font-size: 1.2em; }
+
+#fechaDia { width: 25%; font-size: 0.8em; border-radius: 5%; }
+
+.singLogIn { width: 15%; }
+
+.entrando { width: 50%; margin-inline-start: 50%; font-size: 0.8em; }
+
+.section_container { height: 70vh; }
+
+.title_section { height: 50%; font-size: 2em; border-radius: 25%; }
+
+.section_article { padding: 0.5%; border-radius: 5%; }
+
+.titulosectionarticle { font-size: 1.2em; border-radius: 100%; }
+
+.ul_section { font-size: 1.2em; border-radius: 5%; }
+
+.form_reg { grid-template-columns: repeat(1, 1fr); width: 70%; }
+
+.form_reg input { width: 60%; font-size: 1.2em; }
+
+.form_reg label { font-size: 1.2em; } }
 
 @font-face {
     font-family: duIr;
     src: url(../fuentes/IrishGrover-Regular.ttf);
 }
+@font-face {
+    font-family: gae;
+    src: url(../fuentes/NotoSansJP-VariableFont_wght.ttf);
+
+}
+
+
 
 .container {
     width: 100%;
-    height: 100vh;
-    display: block;
+    height: 120vh;
+    display: grid;
     justify-content: center;
     align-items: center;
 
@@ -25,20 +64,16 @@
 
 .title_header {
     width: 100%;
+    height: 20vh;
     padding-inline-start: 2%;
     color: #FDCE6D;
-    font-size: 5em;
+    font-size: 5.5em;
+    font-weight: 600;
     font-family: duIr;
     text-align: center;
     background-color: #0c6d16;
 }
-.singLogIn{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row;
-}
+
 
 .nav_header {
     display: flex;
@@ -47,6 +82,7 @@
     width: 100%;
     height: 10vh;
     background-color: #FDCE6D;
+    margin: 0.2%;
 }
 
 .ul_nav {
@@ -66,96 +102,136 @@
     font-size: 1.5em;
     font-family: duIr;
 }
-
 #fechaDia {
     color: #ffffff;
+    width: 30%;
     background-color: #0c6d16;
     font-size: 0.99em;
     font-family: duIr;
-}
-.entrando{
-    display: none;
-    
+    border-radius: 10%;
 }
 
-.aside_log_in {
-    width: 100%;
+.singLogIn {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row;
+    
+}
+.entrando {
+    display: none;
+    width: 25%;
     height: 50%;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    background-color: #0c6d16;
+    font-size: 0.99em;
+    margin-inline-start: 75%;
+    z-index: 10;
+}
+.section_container {
+    width: 95%;
+    height: 80vh;
     display: grid;
     justify-content: center;
     align-items: center;
-
+    grid-gap: 1em;
 }
 
-.title_aside {
+.article_section_container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+   
+}
+.title_section {
     width: 100%;
     height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #0c6d16;
+    font-size: 2.5em;
+    font-family: duIr;
+    text-align: center;
+    color: #FDCE6D;
+    border-radius: 35%;
 }
 
-.form_login {
+.section_article{
     width: 100%;
-    height: 80%;
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-}
-
-.section_container {
-    width: 95%;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
     grid-gap: 1em;
+    text-align: center;
+    background-color: #e7c37c;padding: 1%;
+    border-radius: 10%;
+    
 }
+.titulo_section_article{
+    color: #FDCE6D;
+    font-size: 1.5em;
+    font-family:gae;
+    text-align: center;
+    background-color: #0c6d16;
+    border-radius: 500%;
 
-.aside_container {
-    width: 100%;
-    height: 100%;
-    /* display: grid; */
-    grid-template-columns: repeat(2, 1fr);
+}
+.ul_section{
+    display: flex;
+    flex-flow: column;
+    list-style: none;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #0c6d16;
+    color: #FDCE6D;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: duIr;
+    border-radius: 10%;
+
 }
+
 
 /* FORMULARIO */
 
 .container_form {
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
 }
-.header_form{
-    width: 62%;
-    padding-inline-start: 2%;
+
+.header_form {
+    width: 45%;
+
 
 }
+
 
 .registros {
     display: flex;
     flex-flow: column;
-    width: 60%;
+    width: 35%;
     height: max-content;
     background-color: #0c6d16;
     justify-content: center;
     align-items: center;
-    margin: 2%;
+    margin: 1%;
 
 
 }
 
 .registros h1 {
-
     padding-inline-start: 2%;
     color: #FDCE6D;
     font-size: 2em;
@@ -176,7 +252,7 @@
 }
 
 .form_reg input {
-    width: fit-content;
+    width: 30%;
     height: fit-content;
     margin: 5px;
     font-size: 1.5em;
@@ -184,46 +260,12 @@
 }
 
 .form_reg label {
-    width: fit-content;
+    width: max-content;
     height: fit-content;
     margin: 5px;
     font-size: 1.5em;
     background-color: #FDCE6D;
+    font-style: italic;
+    font-weight: 200;
+
 }
-
-
-
-  /* Estilos para el modal */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-  }
-
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }

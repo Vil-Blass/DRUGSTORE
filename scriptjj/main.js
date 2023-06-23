@@ -17,7 +17,7 @@ setInterval(() => {
     const ampm = hora >= 12 ? 'PM' : 'AM'
     const hora12 = (hora % 12) || 12
     const horaAMPM = hora12 + ':' + minutos + ':' + segundos + ' ' + ampm
-    fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mes} del ${año} a las ${horaAMPM}`
+    fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mes} del ${año} ${horaAMPM}`
 })
 //guardar en local
 localStorage.setItem('fechaDia', JSON.stringify(fechaDia));
@@ -63,11 +63,15 @@ const imgConsumibles = [
     "image/cafes/cafe-bombon.jpg","image/cafes/carajillo.webp","image/cafes/cafe-irish.jpg","image/cafes/cafe-descafeinado.jpg",
     "image/refrescos/7up.jpg","image/refrescos/coca-cola.jpg","image/refrescos/coca-cola_lignt.jpg",
     "image/refrescos/coca-cola-zero.jpg","image/refrescos/coca-cola-zero-zero.jpg",
-    "image/refrescos/nestea-te-negro-al-limon.jpg","C:/Users/Usuario/Desktop/DRUGSTORE/image/refrescos/aquarius-limon.png",
-    "image/refrescos/aquarius-naranja-2022.jpg","image/refrescos/schweppes-tonica.png","image/refrescos/schweppes-limon.jpg",
+    "image/refrescos/nestea-te-negro-al-limon.jpg","image/refrescos/aquarius-limon.png",
+    "image/refrescos/aquarius-naranja.png","image/refrescos/schweppes-tonica.png","image/refrescos/schweppes-limon.jpg",
     "image/refrescos/schweppes-naranja.jpg","image/refrescos/mahou-00-tostada.jpg","",
     "","","",
     "","","",
+];
+//array de precios
+const precios = [
+    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50
 ];
 
 const consumibles = document.querySelectorAll('.consumibles');
@@ -98,14 +102,12 @@ consumibles.forEach((consumibles, index) => {
         figure.setAttribute('class', 'figure');
         figure.setAttribute('id', 'figure');
         document.body.appendChild(figure);
-        figure.style.position = 'absolute';
-        figure.style.transition = 'all 1s';
         figure.style.zIndex = '1000';
         figure.style.borderRadius = '10px';
         figure.style.boxShadow = '0 0 10px #000';
         figure.style.objectFit= "contain";
-        figure.style.height = '20%';
-        figure.style.width = '20%';
+        figure.style.height = '15%';
+        figure.style.width = '15%';
         figure.style.display = 'flex';
         figure.style.justifyContent = 'fitconten';
         figure.style.alignItems = 'center';
@@ -117,19 +119,31 @@ consumibles.forEach((consumibles, index) => {
         img.setAttribute('class', 'img');
         img.setAttribute('id', 'img');
         figure.appendChild(img);
-        img.style.height = '75%';
-        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.width = '25%';
+        img.style.position = 'relative';
         img.style.objectFit= "contain";
-
         img.style.transition = 'all 1s';
         img.style.transform = 'scale(1.5)';
         img.style.borderRadius = '10px';
         img.style.boxShadow = '0 0 10px #000';
         
+
+        
         
        const figcaption = document.createElement('figcaption');
        figcaption.setAttribute('class', 'figcaption');
-       figcaption.innerHTML = imgConsumibles[index];
+       figcaption.innerHTML = precios[index];
+       //estilo
+       figcaption.style.position = 'absolute';
+       figcaption.style.left = '0';
+       figcaption.style.top = '0';
+       figcaption.style.width = '25%';
+       figcaption.style.height = '24';
+       figcaption.style.backgroundColor = 'rgba(0,0,0,0.5)';
+       figcaption.style.color = 'white';
+       figcaption.style.textAlign = 'center';
+       figcaption.style.padding = '10px';
        figure.appendChild(figcaption);
     });
     
@@ -155,6 +169,38 @@ consumibles.forEach((consumibles, index) => {
   
 
 });
+const artSecCont = document.querySelectorAll('.section_article');
+const listado = document.querySelectorAll('.listado');
+
+listado.forEach((element, index) => {
+  element.addEventListener('click', function() {
+    // Muestra el elemento que corresponde al enlace en el que se hizo clic
+    const enlace = element.textContent;
+    const seccion = document.querySelector(`.section_article h2.title_section:contains(${enlace})`);
+    if (seccion) {
+      seccion.parentElement.style.opacity = '1';
+    }
+
+    // Oculta todos los demás elementos section_article
+    artSecCont.forEach((art, index) => {
+      if (art.querySelector('h2.title_section') !== seccion) {
+        art.style.opacity = '0';
+      }
+    });
+
+    // Si se hizo clic en el primer enlace del menú, sacar de opacidad todos los elementos section_article
+    if (element === listado[0]) {
+      artSecCont.forEach((art, index) => {
+        art.style.opacity = '1';
+      });
+    }
+  });
+});
+
+
+
+
+
 
 
 
