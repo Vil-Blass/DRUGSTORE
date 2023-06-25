@@ -170,5 +170,11 @@ function imagenes() {
 
 imagenes();
 
+//funcion para mostrar el nombre del usuario
+function nombreUsuario() {
+    const user = document.querySelector('.user');
+    user.innerHTML = localStorage.getItem('nombre');
+}
+
 
 
