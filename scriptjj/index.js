@@ -52,17 +52,17 @@ aqui.addEventListener('click', () => {
 
 
 const imgConsumibles = [
-    "image/zumos/pago_ace.jpg", "image/zumos/pago_arandano.jpg", "image/zumos/pago_banana.jpg", "image/zumos/pago_fresa.jpg",
-    "image/zumos/pago_lima_limon.jpg", "image/zumos/pago_mango.jpg", "image/zumos/pago_manzana.jpg", "image/zumos/pago_melocoton.jpg",
-    "image/zumos/pago_naranja.jpg", "image/zumos/pago_pera.jpg", "image/zumos/pago_piña.jpg", "image/zumos/pago_ponelo.jpg",
-    "image/zumos/pago_tomate.jpg", "image/refrescos/aquabona-manantial-pena-umbria.jpg", "image/refrescos/aquabona-singular-manantial-pena-umbria.jpg",
-    "image/cafes/cafe-solo.jpg", "image/cafes/cafe-con-leche.avif", "image/cafes/cortado.jpg", "image/cafes/cafe-con-hielo.jpg",
-    "image/cafes/cafe-bombon.jpg", "image/cafes/carajillo.webp", "image/cafes/cafe-irish.jpg", "image/cafes/cafe-descafeinado.jpg",
-    "image/refrescos/7up.jpg", "image/refrescos/coca-cola.jpg", "image/refrescos/coca-cola_lignt.jpg",
-    "image/refrescos/coca-cola-zero.jpg", "image/refrescos/coca-cola-zero-zero.jpg",
-    "image/refrescos/nestea-te-negro-al-limon.jpg", "image/refrescos/aquarius-limon.png",
-    "image/refrescos/aquarius-naranja.png", "image/refrescos/schweppes-tonica.png", "image/refrescos/schweppes-limon.jpg",
-    "image/refrescos/schweppes-naranja.jpg", "image/refrescos/mahou-00-tostada.jpg", "",
+    "image/zumos/pago_ace.webp", "image/zumos/pago_arandano.webp", "image/zumos/pago_banana.webp", "image/zumos/pago_fresa.webp",
+    "image/zumos/pago_lima_limon.webp", "image/zumos/pago_mango.webp", "image/zumos/pago_manzana.webp", "image/zumos/pago_melocoton.webp",
+    "image/zumos/pago_naranja.webp", "image/zumos/pago_pera.webp", "image/zumos/pago_piña.webp", "image/zumos/pago_ponelo.webp",
+    "image/zumos/pago_tomate.webp", "image/refrescos/aquabona-manantial-pena-umbria.webp", "image/refrescos/aquabona-singular-manantial-pena-umbria.webp",
+    "image/cafes/cafe-solo.webp", "image/cafes/cafe-con-leche.avif", "image/cafes/cortado.webp", "image/cafes/cafe-con-hielo.webp",
+    "image/cafes/cafe-bombon.webp", "image/cafes/carajillo.webp", "image/cafes/cafe-irish.webp", "image/cafes/cafe-descafeinado.webp",
+    "image/refrescos/7up.webp", "image/refrescos/coca-cola.webp", "image/refrescos/coca-cola_lignt.webp",
+    "image/refrescos/coca-cola-zero.webp", "image/refrescos/coca-cola-zero-zero.webp",
+    "image/refrescos/nestea-te-negro-al-limon.webp", "image/refrescos/aquarius-limon.webp",
+    "image/refrescos/aquarius-naranja.webp", "image/refrescos/schweppes-tonica.webp", "image/refrescos/schweppes-limon.webp",
+    "image/refrescos/schweppes-naranja.webp", "image/refrescos/mahou-00-tostada.webp", "",
     "", "", "",
     "", "", "",
 ];
@@ -86,6 +86,16 @@ function imagenes() {
             figure.style.position = 'absolute';
             figure.style.left = `${x}px`;
             figure.style.top = `${y}px`;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.borderRadius = '10px';
+            img.style.objectFit = "contain";
+            img.style.display = 'flex';
+            img.style.justifyContent = 'fitconten';
+            img.style.alignItems = 'center';
+            img.style.flexFlow = 'column';
+            img.style.boxShadow = '0 0 10px #000';
+
 
         }
 
@@ -110,23 +120,11 @@ function imagenes() {
             figure.style.justifyContent = 'fitconten';
             figure.style.alignItems = 'center';
             figure.style.flexFlow = 'column';
-
-
             const img = document.createElement('img');
             img.setAttribute('src', imgConsumibles[index]);
             img.setAttribute('class', 'img');
             img.setAttribute('id', 'img');
             figure.appendChild(img);
-            img.style.height = '100%';
-            img.style.width = '25%';
-            img.style.position = 'relative';
-            img.style.objectFit = "contain";
-            img.style.borderRadius = '10px';
-            img.style.boxShadow = '0 0 10px #000';
-
-
-
-
             const figcaption = document.createElement('figcaption');
             figcaption.setAttribute('class', 'figcaption');
             figcaption.innerHTML = precios[index];
@@ -146,14 +144,16 @@ function imagenes() {
 
 
         consumibles.addEventListener('mousemove', function (event) {
-            const img = document.querySelector('#img');
+            const figure = document.querySelector('#figure');
             if (figure) {
                 const x = event.clientX + 100;
                 const y = event.clientY;
                 figure.style.position = 'absolute';
                 figure.style.left = `${x}px`;
                 figure.style.top = `${y}px`;
-            
+
+
+
             }
         });
 
