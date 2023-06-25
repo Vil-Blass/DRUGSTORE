@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- seo -->
-    <meta name="description" content="Disfruta de bebidas y más en The Drugstore Irish. Tenemos una amplia selección de bebidas y combinados para todos los gustos. ¡Visítanos hoy!">
+    <meta name="description"
+        content="Disfruta de bebidas y más en The Drugstore Irish. Tenemos una amplia selección de bebidas y combinados para todos los gustos. ¡Visítanos hoy!">
     <meta name="keywords" content="The Drugstore Irish, bebidas, alcohol, sin alcohol, combinados, tipos de combinados">
     <meta name="author" content="jeffry jaquez Santana">
     <meta name="owner" content="jeffry jaquez Santana">
@@ -18,9 +19,6 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Language" content="es">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
     <meta property="og:title" content="The Drugstore Irish">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.thedrugstoreirish.com">
@@ -52,15 +50,15 @@
                     <li><a class="listado">Combinados</a></li>
                     <li><a class="listado">Tipos de Combinados</a></li>
                 </ul>
-                <time id="fechaDia">reloj</time>
+                <time-datetime id="fechaDia">reloj</time-datetime>
                 <article class="singLogIn">
-                    <button id="formulario"><a href="form.html">Sing up</a></button>
+                    <a id="formulario" href="form.html">Sing up</a>
                     <button class="entrar">Log In</button>
                 </article>
             </nav>
             <article class="entrando">
-                <h2 class="title_section">Log In</h2>
-                <form class="form_login" action="" method="post">
+                <h4 class="title_section">Log In</h4>
+                <form class="form_login" action="login.php" method="post">
                     <label for="user">Usuario</label>
                     <input class="user" type="email" name="user" id="user" placeholder="User">
                     <label for="password">Password</label>
@@ -75,9 +73,9 @@
 
             <!-- CONTENIDO -->
 
-            <article class="article_section_container ">
+            <section class="article_section_container ">
 
-                <section class="section_article">
+                <article class="section_article">
                     <h2 class="title_setcion">Bebidas Sin</h2>
                     <h3 class="titulo_section_article">ZUMOS</h3>
                     <ul class="ul_section">
@@ -95,15 +93,15 @@
                         <li class="consumibles">POMENO</li>
                         <li class="consumibles">TOMATE</li>
                     </ul>
-                </section>
-                <section class="section_article">
+                </article>
+                <article class="section_article">
                     <h3 class="titulo_section_article">AGUAs</h3>
                     <ul class="ul_section">
                         <li class="consumibles">AGUA CON GAS</li>
                         <li class="consumibles">AGUA SIN GAS</li>
                     </ul>
-                </section>
-                <section class="section_article">
+                </article>
+                <article class="section_article">
                     <h3 class="titulo_section_article">CAFES</h3>
                     <ul class="ul_section">
                         <li class="consumibles">CAFE SOLO</li>
@@ -116,8 +114,8 @@
                         <li class="consumibles">CAFE DESCAFEINADO</li>
 
                     </ul>
-                </section>
-                <section class="section_article">
+                </article>
+                <article class="section_article">
                     <h3 class="titulo_section_article">REFRESCOS</h3>
                     <ul class="ul_section">
                         <li class="consumibles">7UP</li>
@@ -133,77 +131,85 @@
                         <li class="consumibles">SCHWEPPES NARANJA</li>
                         <li class="consumibles">CERVEZA 00%</li>
                     </ul>
+                </article>
+
+
+
+                <section class="article_section_container">
+
+                    <article class="section_article">
+                        <h2 class="title_setcion">Bebidas Con ALCOHOL</h2>
+                        <h3 class="titulo_section_article">RONES</h3>
+                        <ul class="ul_section">
+                            <li class="consumibles">RON BARCELÓ AÑEJO</li>
+                            <li class="consumibles">RON BRUGAL AÑEJO</li>
+                            <li class="consumibles">RON BRUGAL EXTRA VIEJO</li>
+                            <li class="consumibles">RON CACIQUE</li>
+                            <li class="consumibles">RON HAVANA CLUB AÑEJO 3 AÑOS</li>
+                            <li class="consumibles">RON HAVANA CLUB AÑEJO 7 AÑOS</li>
+                            <li class="consumibles">RON MATUSALE</li>
+                        </ul>
+                    </article>
+                    <article class="section_article">
+                        <h3 class="titulo_section_article">whisky</h3>
+                        <ul class="ul_section">
+                            <li class="consumibles">JACK DANIELS</li>
+                            <li class="consumibles">JONNIE WALKER RED</li>
+                            <li class="consumibles">BALLANTINE`S</li>
+                            <li class="consumibles">DEWAR`S</li>
+                            <li class="consumibles">WHISKY DYC</li>
+                            <li class="consumibles">J&B</li>
+                            <li class="consumibles">JONNIE WALKER BLACK</li>
+                            <li class="consumibles">JONNIE WALKER BLUE</li>
+                            <li class="consumibles">OLD PARR</li>
+                            <li class="consumibles">JAMESON</li>
+                            <li class="consumibles">CHIVAS REGAL</li>
+                            <li class="consumibles">GLENFIDDICH</li>
+                        </ul>
+                    </article>
+                    <article class="section_article">
+                        <h3 class="titulo_section_article"></h3>
+                        <ul class="ul_section">
+                            <li class="consumibles">Heineken</li>
+                            <li class="consumibles">Corona</li>
+                            <li class="consumibles">PAULANER</li>
+                            <li class="consumibles">Guinness</li>
+                            <li class="consumibles">MAESTRA </li>
+                            <li class="consumibles">DESPERADOS</li>
+                            <li class="consumibles">ALAMBRA</li>
+                            <li class="consumibles">MAHOU</li>
+                            <li class="consumibles">SELECTA</li>
+                        </ul>
+                    </article>
                 </section>
+            </section>
 
-            </article>
-            <article class="article_section">
 
-                <h2 class="title_setcion">Bebidas Con</h2>
-                <asisectionde class="aside_container">
-                    <h3 class="titulo_section_article">RONES</h3>
-                    <ul class="ul_section">
-                        <li class="consumibles">RON BARCELÓ AÑEJO</li>
-                        <li class="consumibles">RON BRUGAL AÑEJO</li>
-                        <li class="consumibles">RON BRUGAL EXTRA VIEJO</li>
-                        <li class="consumibles">RON CACIQUE</li>
-                        <li class="consumibles">RON HAVANA CLUB AÑEJO 3 AÑOS</li>
-                        <li class="consumibles">RON HAVANA CLUB AÑEJO 7 AÑOS</li>
-                        <li class="consumibles">RON MATUSALE</li>
-                        <li class="consumibles"></li>
-                        <li class="consumibles"></li>
-                        <li class="consumibles"></li>
-                        <li class="consumibles"></li>
-                        <li class="consumibles"></li>
-                        <li class="consumibles"></li>
-                        <li class="consumibles"></li>
-                        <li class="consumibles"></li>
-                        <li class="consumibles"></li>
-                    </ul>
-                </asisectionde>
-            </article>
+
+
         </section>
-    
-
-
-    <footer>
-        <div class="container_footer">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Encuéntranos en el mapa</h3>
-                    <div id="map"></div>
-                    <iframe
-  width="600"
-  height="450"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-    &q=Space+Needle,Seattle+WA">
-</iframe>
-                </div>
-                <div class="col-md-3">
-                    <h3>Contacto</h3>
-                    <ul>
-                        <li>Dirección: Calle Falsa 123, Ciudad Ficticia</li>
-                        <li>Teléfono: 123-456-7890</li>
-                        <li>Correo electrónico: info@tuempresa.com</li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h3>Síguenos en redes sociales</h3>
-                    <ul class="list-inline">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+    </section>
+    <footer class="pie">
+        <div class="contact">
+            <h3>Contacto</h3>
+            <ul>
+                <li>Dirección: Calle Falsa 123, Ciudad Ficticia</li>
+                <li>Teléfono: 123-456-7890</li>
+                <li>Correo electrónico: info@tuempresa.com</li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h3>Síguenos en redes sociales</h3>
+            <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
         </div>
     </footer>
-</section>
-    <script src="./scriptjj/main.js"></script>
+
+    <script src="/scriptjj/index.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_API"></script>
 
 

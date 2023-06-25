@@ -1,6 +1,3 @@
-
-
-
 //mostrar la hora y la fecha local en fechaDia
 const fechaDia = document.querySelector('#fechaDia')
 // funcion de relog automatico
@@ -124,8 +121,6 @@ function imagenes() {
             img.style.width = '25%';
             img.style.position = 'relative';
             img.style.objectFit = "contain";
-            img.style.transition = 'all 1s';
-            img.style.transform = 'scale(1.5)';
             img.style.borderRadius = '10px';
             img.style.boxShadow = '0 0 10px #000';
 
@@ -158,6 +153,7 @@ function imagenes() {
                 figure.style.position = 'absolute';
                 figure.style.left = `${x}px`;
                 figure.style.top = `${y}px`;
+            
             }
         });
 
@@ -171,162 +167,8 @@ function imagenes() {
 
     });
 }
-const artSecCont = document.querySelectorAll('.section_article');
-const listado = document.querySelectorAll('.listado');
 
-listado.forEach((element, index) => {
-    element.addEventListener('click', function () {
-        // Muestra el elemento que corresponde al enlace en el que se hizo clic
-        const enlace = element.textContent;
-        const seccion = document.querySelector(`.section_article h2.title_section:contains(${enlace})`);
-        if (seccion) {
-            seccion.parentElement.style.opacity = '1';
-        }
-
-        // Oculta todos los demás elementos section_article
-        artSecCont.forEach((art, index) => {
-            if (art.querySelector('h2.title_section') !== seccion) {
-                art.style.opacity = '0';
-            }
-        });
-
-        // Si se hizo clic en el primer enlace del menú, sacar de opacidad todos los elementos section_article
-        if (element === listado[0]) {
-            artSecCont.forEach((art, index) => {
-                art.style.opacity = '1';
-            });
-        }
-    });
-});
-
-
-// Inicializa el mapa
-function initMap() {
-    var uluru = { lat: 37.7749, lng: -122.4194 };
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
-        center: uluru
-    });
-    var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-    });
-}
-
-
-
-
-
-
-
-// //crear carousel automatico con el array 
-// const carousel = document.querySelector('carousel');
-// const img = document.createElement('img');
-// img.setAttribute('id', 'img');
-// img.setAttribute('class', 'img');
-// img.setAttribute('src', juegos[0]);
-// carousel.appendChild(img);
-//  img.style.height = '100%';
-
-// //cambiar imgConsumibles automaticamente
-// const i = 0;
-// setInterval( ()=> {
-//     if (i < juegos.length - 1) {
-//         i++;
-//     } else {
-//         i = 0;
-//     }
-//     img.setAttribute('src', juegos[i]);
-// }
-//     , 2500);
-// // dar tamaños
-// img.style.width = '80%';
-// img.style.height = '100%';
-// //animar y dar estilo
-// img.addEventListener('mouseover', function () {
-//     img.style.transform = 'scale(1.2)';
-//     img.style.transition = 'all 1s';
-// }
-// );
-// img.addEventListener('mouseout', function () {
-//     img.style.transform = 'scale(1)';
-//     img.style.transition = 'all 1s';
-// }
-// );
-console.log('ESTOY')
-
-// crear un array para nuevo usuario
-const usuarios = [];
-
-const nombre = document.querySelector('.nombre');
-const apellido = document.querySelector('.apellido');
-const edad = document.querySelector('.edad')
-const email = document.querySelector('.email');
-const password = document.querySelector('.pass');
-const password2 = document.querySelector('.pass');
-const check = document.querySelector('.check');
-const envio = document.querySelector('.envio');
-// registrar usuaros 
-envio.addEventListener('click', function () {
-    if (nombre.value == '' || apellido.value == '' || edad.value == '' || email.value == '' || password.value == '' || password2.value == '') {
-        alert('rellene todos los campos');
-    } else if (password.value != password2.value) {
-        alert('las contraseñas no coinciden');
-    } else if (check.checked == false) {
-        alert('acepte los terminos y condiciones');
-    } else {
-        alert('usuario registrado');
-        const usuario = {
-            nombre: nombre.value,
-            apellido: apellido.value,
-            edad: edad.value,
-            email: email.value,
-            password: password.value,
-        }
-
-        usuarios.push(usuario);
-        console.log(usuarios);
-        nombre.value = '';
-        apellido.value = '';
-        edad.value = '';
-        email.value = '';
-        password.value = '';
-        password2.value = '';
-        check.checked = false;
-    }
-    //guadar en sesion
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-    //recuperar
-    const usuariosRecuperados = JSON.parse(localStorage.getItem('usuarios'));
-    console.log(usuariosRecuperados + '          SIIIIII');
-
-    //si es todo correcto llevar al index
-    if (usuariosRecuperados) {
-        window.location.href = './index.html';
-    }
-})
-
-localStorage.setItem('envio', JSON.stringify(envio));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+imagenes();
 
 
 
