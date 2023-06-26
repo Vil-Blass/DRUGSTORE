@@ -95,14 +95,8 @@ function imagenes() {
             img.style.alignItems = 'center';
             img.style.flexFlow = 'column';
             img.style.boxShadow = '0 0 10px #000';
-
-
         }
-
-
-
     });
-
     consumibles.forEach((consumibles, index) => {
         consumibles.addEventListener('mouseenter', function () {
             //crear figure
@@ -140,9 +134,6 @@ function imagenes() {
             figcaption.style.padding = '10px';
             figure.appendChild(figcaption);
         });
-
-
-
         consumibles.addEventListener('mousemove', function (event) {
             const figure = document.querySelector('#figure');
             if (figure) {
@@ -151,30 +142,87 @@ function imagenes() {
                 figure.style.position = 'absolute';
                 figure.style.left = `${x}px`;
                 figure.style.top = `${y}px`;
-
-
-
             }
         });
-
         consumibles.addEventListener('mouseleave', function () {
             const figure = document.querySelector('.figure');
             if (figure) {
                 document.body.removeChild(figure); figure
             }
         });
-
-
     });
 }
-
 imagenes();
-
 //funcion para mostrar el nombre del usuario
 function nombreUsuario() {
     const user = document.querySelector('.user');
     user.innerHTML = localStorage.getItem('nombre');
 }
 
+// //crear carousel automatico con el array 
+// const combis = []
+// const carousel = document.querySelector('carousel');
+// const img = document.createElement('img');
+// img.setAttribute('id', 'img');
+// img.setAttribute('class', 'img');
+// img.setAttribute('src', combis[0]);
+// carousel.appendChild(img);
+// img.style.height = '100%';
 
+// //cambiar imgConsumibles automaticamente
+// const i = 0;
+// setInterval(() => {
+//     if (i < juegos.length - 1) {
+//         i++;
+//     } else {
+//         i = 0;
+//     }
+//     img.setAttribute('src', juegos[i]);
+// }
+//     , 2500);
+// // dar tamaños
+// img.style.width = '80%';
+// img.style.height = '100%';
+// //animar y dar estilo
+// img.addEventListener('mouseover', function () {
+//     img.style.transform = 'scale(1.2)';
+//     img.style.transition = 'all 1s';
+// }
+// );
+// img.addEventListener('mouseout', function () {
+//     img.style.transform = 'scale(1)';
+//     img.style.transition = 'all 1s';
+// }
+// );
 
+function scroll() {
+    //crear boton
+    let btnScrollTop = document.createElement('button');
+    btnScrollTop.setAttribute('id', 'btnScrollTop');
+    btnScrollTop.innerHTML = 'Ir arriba';
+    btnScrollTop.style.position = 'fixed';
+    btnScrollTop.style.right = '20px';
+    btnScrollTop.style.bottom = '20px';
+    btnScrollTop.style.backgroundColor = '#ff0000';
+    btnScrollTop.style.color = '#fff';
+    btnScrollTop.style.borderRadius = '40%';
+    btnScrollTop.style.border = 'none';
+    btnScrollTop.style.display = 'none'
+    document.body.appendChild(btnScrollTop);
+
+    btnScrollTop = document.querySelector('#btnScrollTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            btnScrollTop.style.display = "block";
+        } else {
+            btnScrollTop.style.display = "none";
+        }
+    })
+    btnScrollTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+scroll();
