@@ -100,7 +100,7 @@
   object-fit: contain;
   height: 20vh;
   padding-inline-start: 2%;
-  color: #FDCE6D;
+  color: #CD4C0F;
   font-size: 5.5em;
   font-weight: 500;
   font-family: duIr;
@@ -216,7 +216,7 @@
 }
 
 .titulo_section_article {
-  color: #FDCE6D;
+  color: #CD4C0F;
   font-size: 1.5em;
   font-family: gae;
   text-align: center;
@@ -347,9 +347,10 @@
 
 
 
-@media (max-width: 384px) {
+@media (min-width: 384px) {
     .container {
       height: auto;
+      flex-wrap: wrap;
     }
   
     .header_container {
@@ -357,15 +358,13 @@
     }
   
     .title_header {
-      font-size: 3em;
+      font-size: 2.7em;
       height: 15vh;
     }
   
     .nav_header {
       height: 12vh;
-      width: 100%;
-
-
+      width: auto;
     }
   
     .ul_nav {
