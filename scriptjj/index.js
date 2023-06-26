@@ -83,7 +83,7 @@ function imagenes() {
         if (figure) {
             const x = event.clientX + 10;
             const y = event.clientY;
-            figure.style.position = 'absolute';
+            figure.style.position = 'fixed';
             figure.style.left = `${x}px`;
             figure.style.top = `${y}px`;
             img.style.width = '100%';
@@ -123,7 +123,7 @@ function imagenes() {
             figcaption.setAttribute('class', 'figcaption');
             figcaption.innerHTML = precios[index];
             //estilo
-            figcaption.style.position = 'absolute';
+            figcaption.style.position = 'fixed';
             figcaption.style.left = '0';
             figcaption.style.top = '0';
             figcaption.style.width = '25%';
@@ -139,7 +139,7 @@ function imagenes() {
             if (figure) {
                 const x = event.clientX + 100;
                 const y = event.clientY;
-                figure.style.position = 'absolute';
+                figure.style.position = 'fixed';
                 figure.style.left = `${x}px`;
                 figure.style.top = `${y}px`;
             }
