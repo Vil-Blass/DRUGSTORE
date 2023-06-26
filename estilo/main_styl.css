@@ -383,8 +383,9 @@
     .entrando {
       width: 50%;
       height: 70%;
-      margin-inline-start: 25%;
-    }
+      margin-inline-start: 50%;
+      font-size: 0.8em;
+        }
   
     .section_container {
       height: auto;
