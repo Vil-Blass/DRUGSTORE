@@ -15,20 +15,25 @@
 
 }
 
-
-
-
-
 /* Estilos para pantallas más grandes */
 .container {
-    width: 100%;
-    height: 120vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
 .header_container {
   width: 95%;
   height: 20vh;
@@ -42,7 +47,7 @@
   height: 20vh;
   padding-inline-start: 2%;
   color: #CD4C0F;
-  font-size: 5.5em;
+  font-size: 3.5em;
   font-weight: 500;
   font-family: duIr;
   text-align: center;
@@ -70,7 +75,16 @@
 
 }
 
+.ul_nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+
+}
+
 .ul_nav li a {
+  width: max-content;
   text-decoration: none;
   color: #ffffff;
   background-color: #0c6d16;
@@ -117,13 +131,14 @@
 }
 
 .article_section_container {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
   justify-content: center;
   grid-gap: 1em;
+  flex-wrap: wrap;
 }
 
 .title_section {
@@ -203,18 +218,17 @@
 
 }
 
-.pie
-{
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0c6d16;
-    top: 0 auto;
-    color: #FDCE6D;
-    font-size: 1.5em;
-    font-family: duIr;
+.pie {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c6d16;
+  top: 0 auto;
+  color: #FDCE6D;
+  font-size: 1.5em;
+  font-family: duIr;
 }
 
 
@@ -288,6 +302,7 @@
 
 }
 
+
 @media (min-width: 384px) {
   .container {
     width: auto;
@@ -332,14 +347,16 @@
     width: 30%;
 
   }
-.singLogIn{
-  width: 10%;
-  font-size: 0.8em;
-  margin: 1%;
-  padding: 1%;
-  flex-wrap: wrap;
-  
-}
+
+  .singLogIn {
+    width: 10%;
+    font-size: 0.8em;
+    margin: 1%;
+    padding: 1%;
+    flex-wrap: wrap;
+
+  }
+
   .entrando {
     width: 50%;
     height: 70%;
