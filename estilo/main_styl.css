@@ -134,64 +134,6 @@
     align-items: center;
   }
   
-  /* Estilos para pantallas más pequeñas */
-  @media only screen and (max-width: 400px) {
-    .title_header {
-      font-size: 3.5em;
-    }
-  
-    .nav_header {
-      flex-flow: column;
-    }
-  
-    .ul_nav {
-      width: 100%;
-    }
-  
-    .ul_nav li a {
-      font-size: 1.2em;
-    }
-  
-    #fechaDia {
-      width: 50%;
-      font-size: 0.8em;
-    }
-  
-    .singLogIn {
-      width: 20%;
-    }
-  
-    .entrando {
-      width: 100%;
-      margin-inline-start: 0;
-    }
-  
-    .section_container {
-      grid-template-columns: 1fr;
-    }
-  
-    .article_section_container {
-      grid-template-columns: 1fr;
-    }
-  
-    .title_section {
-      font-size: 2em;
-    }
-  
-    .section_article {
-      height: 100%;
-      padding: 5%;
-    }
-  
-    .titulo_section_article {
-      font-size: 1.2em;
-    }
-  
-    .ul_section {
-      font-size: 1.2em;
-    }
-  } */
-
 .header_container {
   width: 95%;
   height: 20vh;
