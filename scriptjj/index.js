@@ -201,14 +201,16 @@ function scroll() {
     btnScrollTop.setAttribute('id', 'btnScrollTop');
     btnScrollTop.innerHTML = 'Ir arriba';
     btnScrollTop.style.position = 'fixed';
-    btnScrollTop.style.right = '20px';
+    btnScrollTop.style.right = '200px';
     btnScrollTop.style.bottom = '20px';
     btnScrollTop.style.backgroundColor = '#ff0000';
     btnScrollTop.style.color = '#fff';
     btnScrollTop.style.borderRadius = '40%';
     btnScrollTop.style.border = 'none';
     btnScrollTop.style.display = 'none'
+    btnScrollTop.style.padding = '10px';
     document.body.appendChild(btnScrollTop);
+    
 
     btnScrollTop = document.querySelector('#btnScrollTop');
     window.addEventListener('scroll', () => {

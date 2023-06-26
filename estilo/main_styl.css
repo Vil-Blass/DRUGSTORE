@@ -90,6 +90,7 @@
   background-color: #0c6d16;
   font-size: 1.5em;
   font-family: duIr;
+  padding: 3px;
 }
 
 #fechaDia {
@@ -108,6 +109,16 @@
   align-items: center;
   flex-flow: row;
 
+
+}
+.singLogIn{
+  background-color: #0c6d16;
+  font-size: 0.99em;
+  font-family: duIr;
+  border-radius: 10%;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 3px;
 }
 
 .entrando {
