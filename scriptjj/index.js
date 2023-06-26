@@ -123,7 +123,7 @@ function imagenes() {
             figcaption.setAttribute('class', 'figcaption');
             figcaption.innerHTML = precios[index];
             //estilo
-            figcaption.style.position = 'fixed';
+            figcaption.style.position = 'absolute';
             figcaption.style.left = '0';
             figcaption.style.top = '0';
             figcaption.style.width = '25%';
