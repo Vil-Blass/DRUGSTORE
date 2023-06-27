@@ -179,11 +179,11 @@ const combis = [
     
 ]
 const carousel = document.querySelector('.carousel');
-const img = document.createElement('img');
-img.setAttribute('id', 'img');
-img.setAttribute('class', 'img__carousel');
-img.setAttribute('src', combis[0]);
-carousel.appendChild(img);
+const img_c = document.createElement('img');
+img_c.setAttribute('id', 'img_c');
+img_c.setAttribute('class', 'img__c');
+img_c.setAttribute('src', combis[0]);
+carousel.appendChild(img_c);
 
 
 //cambiar imgConsumibles automaticamente
@@ -194,13 +194,14 @@ setInterval(() => {
     } else {
         i = 0;
     }
-    img.setAttribute('src', combis[i]);
+    img_c.setAttribute('src', combis[i]);
 }
     , 2500);
 
 
 
 }
+
 carro();
 
 
