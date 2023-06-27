@@ -1,5 +1,5 @@
 //mostrar la hora y la fecha local en fechaDia
-const fechaDia = document.querySelector('#fechaDia')
+let fechaDia = document.querySelector('#fechaDia')
 // funcion de relog automatico
 setInterval(() => {
     const fecha = new Date()

@@ -18,15 +18,13 @@
 /* Estilos para pantallas más grandes */
 .container {
   max-width: min(100%,1600px);
-  height: 120vh;
+  height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
   align-content: center;
   text-align: center;
-  flex-wrap: wrap;
-  background:maroon;
 }
 
 .header_container {
@@ -264,7 +262,6 @@
 
 }
 
-
 .registros {
   display: flex;
   flex-flow: column;
@@ -318,7 +315,8 @@
 }
 
 
-@media (min-width: 384px) {
+
+@media (max-width: 384px) {
   .container {
     width: auto;
     height: auto;
@@ -384,7 +382,7 @@
   }
 
   .article_section_container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     height: auto;
     justify-content: center;
     align-items: center;
