@@ -160,40 +160,60 @@ function nombreUsuario() {
 }
 
 // //crear carousel automatico con el array 
-// const combis = []
-// const carousel = document.querySelector('carousel');
-// const img = document.createElement('img');
-// img.setAttribute('id', 'img');
-// img.setAttribute('class', 'img');
-// img.setAttribute('src', combis[0]);
-// carousel.appendChild(img);
-// img.style.height = '100%';
+const combis = [
+    "image/combis/1557247687-Whiskey-Cola__highres1.jpg" ,
+    "image/combis/gim tonic.jpg",
+    "image/combis/icon_1533143982-Rum-and-Coke__highres.jpg",
+    "image/combis/icon_1533144518-Boston-Tea_highres.jpg",
+    "image/combis/icon_1536956871-Vodka-with-Sprite__highres.jpg",
+    "image/combis/icon_1537312076-jam-jackpot-highres.jpg",
+    "image/combis/icon_1537434627-Desert-Island__highres.jpg",
+    "image/combis/icon_1537737143-Sabotage__highres.jpg",
+    "image/combis/icon_1537763505-Dark-Rum-and-Coke__highres.jpg",
+    "image/combis/icon_1556010491-Grapefruit-Liqueur-and-Cola__highres.jpg",
+    "image/combis/icon_1556121518-Old-fashioned-w800px.jpg",
+    "image/combis/icon_1557242375-Tequila-Batanga__highres.jpg",
+    "image/combis/icon_1629717664-Whiskey.jpg",
+    "image/combis/images.jpeg",
+    "image/combis/ron cola.jpg",
+    
+]
+const carousel = document.querySelector('.carousel');
+const img = document.createElement('img');
+img.setAttribute('id', 'img');
+img.setAttribute('class', 'img');
+img.setAttribute('src', combis[0]);
+carousel.appendChild(img);
+img.style.height = '100%';
 
-// //cambiar imgConsumibles automaticamente
-// const i = 0;
-// setInterval(() => {
-//     if (i < juegos.length - 1) {
-//         i++;
-//     } else {
-//         i = 0;
-//     }
-//     img.setAttribute('src', juegos[i]);
-// }
-//     , 2500);
-// // dar tamaños
-// img.style.width = '80%';
-// img.style.height = '100%';
-// //animar y dar estilo
-// img.addEventListener('mouseover', function () {
-//     img.style.transform = 'scale(1.2)';
-//     img.style.transition = 'all 1s';
-// }
-// );
-// img.addEventListener('mouseout', function () {
-//     img.style.transform = 'scale(1)';
-//     img.style.transition = 'all 1s';
-// }
-// );
+//cambiar imgConsumibles automaticamente
+let i = 0;
+setInterval(() => {
+    if (i < combis.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+    img.setAttribute('src', combis[i]);
+}
+    , 2500);
+// dar tamaños
+img.style.width = '40%';
+img.style.height = '50%';
+img.style.objectFit = 'contain';
+
+//animar y dar estilo
+img.addEventListener('mouseover', function () {
+    img.style.transform = 'scale(1.2)';
+    img.style.transition = 'all 1s';
+}
+);
+img.addEventListener('mouseout', function () {
+    img.style.transform = 'scale(1)';
+    img.style.transition = 'all 1s';
+}
+);
+
 
 function scroll() {
     //crear boton

@@ -1,1 +1,0 @@
-onready(function(){let e=document.querySelectorAll(".faq-block__question");for(let t=0;t<e.length;t++)e[t].addEventListener("click",function(){this.parentElement.classList.toggle("active");let e=this.nextElementSibling;e.style.maxHeight?e.style.maxHeight=null:e.style.maxHeight=e.scrollHeight+"px"})});

@@ -144,8 +144,8 @@
 .article_section_container {
   width: auto;
   height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   align-items: center;
   justify-content: center;
   grid-gap: 1em;
@@ -228,6 +228,11 @@
   text-transform: uppercase;
 
 }
+/* #combis {
+ object-fit: cover;
+ width: 100%;
+ height: fit-content;
+} */
 
 .pie {
   width: 100%;
