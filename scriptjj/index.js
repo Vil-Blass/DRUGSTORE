@@ -184,6 +184,12 @@ img_c.setAttribute('id', 'img_c');
 img_c.setAttribute('class', 'img__c');
 img_c.setAttribute('src', combis[0]);
 carousel.appendChild(img_c);
+//estilo
+img_c.style.width = '100%';
+img_c.style.height = '100%';
+img_c.style.borderRadius = '10px';
+img_c.style.objectFit = "contain";
+
 
 
 //cambiar imgConsumibles automaticamente

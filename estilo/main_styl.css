@@ -17,7 +17,7 @@
 
 /* Estilos para pantallas más grandes */
 .container {
-  width: 100%;
+  max-width: min(100%,1600px);
   height: 120vh;
   display: flex;
   flex-flow: column;
@@ -26,13 +26,8 @@
   align-content: center;
   text-align: center;
   flex-wrap: wrap;
+  background:maroon;
 }
-
-
-
-
-
-
 
 .header_container {
   width: 95%;
@@ -46,7 +41,7 @@
   object-fit: contain;
   height: 20vh;
   padding-inline-start: 2%;
-  color: #CD4C0F;
+  color:#fac353;
   font-size: 3.5em;
   font-weight: 500;
   font-family: duIr;
@@ -60,7 +55,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   background-color: #FDCE6D;
   margin: 0.2%;
 }
@@ -69,17 +64,12 @@
   display: flex;
   list-style: none;
   justify-content: space-evenly;
-  align-items: center;
   width: 60%;
   height: 100%;
 
 }
 
-.ul_nav li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .ul_nav li a {
   width: max-content;
@@ -93,22 +83,13 @@
 
 #fechaDia {
   color: #ffffff;
-  width: 30%;
+  /* width: 30%; */
   background-color: #0c6d16;
   font-size: 0.99em;
   font-family: duIr;
   border-radius: 10%;
 }
 
-.singLogIn {
-  width: 10%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row;
-
-
-}
 .singLogIn{
   background-color: #0c6d16;
   font-size: 0.99em;
@@ -122,7 +103,7 @@
 .entrando {
   display: none;
   width: 25%;
-  height: 50%;
+  height: 15vh;
   background-color: #0c6d16;
   font-size: 0.99em;
   margin-inline-start: 75%;
@@ -143,7 +124,7 @@
   width: auto;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(4,auto-fit, minmax( 200px, 1fr)); 
+  grid-template-columns: repeat(4, 1fr); 
   align-items: center;
   justify-content: center;
   grid-gap: 1em;
@@ -228,18 +209,30 @@
   text-transform: uppercase;
 
 }
+#combis{
 
-.carousel{
-  width: 50%;
-  height: 50%;
-  justify-items: center;
-}
-.img__carousel{
-  width: 50%;
-  height: 50%;
+  background-color: #0c6d16;
+  width: 55%;
+  height: 55%;
+  font-size: 1.5em;
+  object-position: center;
   object-fit: contain;
+  border-radius: 10%;
+}
+.carousel1{
+  width: 75%;
+  height: 100%;
+
+  
+}
+.carousel{
+  width: 100%;
+  height: 30%;
+  object-fit: contain;
+  object-position: center;
 
 }
+
 
 .pie {
   width: 100%;
@@ -249,7 +242,7 @@
   align-items: center;
   background-color: #0c6d16;
   color: #FDCE6D;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: duIr;
 }
 
@@ -333,7 +326,7 @@
   }
 
   .header_container {
-    height: 25vh;
+    height: 30vh;
   }
 
   .title_header {
