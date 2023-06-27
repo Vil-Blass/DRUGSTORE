@@ -17,8 +17,8 @@
 
 /* Estilos para pantallas más grandes */
 .container {
-  max-width: min(100%,1600px);
-  height: 100vh;
+  max-width: min(100%,3140px);
+  height: 140vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -36,9 +36,9 @@
 }
 
 .title_header {
-  object-fit: contain;
-  height: 20vh;
-  padding-inline-start: 2%;
+  /* object-fit: contain; */
+  height: 10vh;
+  padding: 2%;
   color:#fac353;
   font-size: 3.5em;
   font-weight: 500;
@@ -53,9 +53,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 15vh;
+  height: 11.5vh;
   background-color: #FDCE6D;
-  margin: 0.2%;
+  margin: 0.1%;
 }
 
 .ul_nav {
@@ -64,6 +64,7 @@
   justify-content: space-evenly;
   width: 60%;
   height: 100%;
+  align-items: center;
 
 }
 
@@ -114,7 +115,7 @@
   grid-template-columns: none;
   justify-content: center;
   align-items: center;
-  margin-block-start: 7%;
+  margin-block-start: 10%;
 
 }
 
@@ -210,7 +211,7 @@
 #combis{
 
   background-color: #0c6d16;
-  width: 55%;
+  width: 20vw;
   height: 55%;
   font-size: 1.5em;
   object-position: center;
@@ -225,7 +226,7 @@
 }
 .carousel{
   width: 100%;
-  height: 30%;
+  height: 100%;
   object-fit: contain;
   object-position: center;
 
@@ -316,7 +317,7 @@
 
 
 
-@media (max-width: 384px) {
+@media (min-width: 250px) and ( max-width: 768px)  {
   .container {
     width: auto;
     height: auto;

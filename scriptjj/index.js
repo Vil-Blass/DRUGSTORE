@@ -161,21 +161,21 @@ function nombreUsuario() {
 function carro() {
     
 const combis = [
-    "image/combis/1557247687-Whiskey-Cola__highres1.jpg" ,
-    "image/combis/gim tonic.jpg",
-    "image/combis/icon_1533143982-Rum-and-Coke__highres.jpg",
-    "image/combis/icon_1533144518-Boston-Tea_highres.jpg",
-    "image/combis/icon_1536956871-Vodka-with-Sprite__highres.jpg",
-    "image/combis/icon_1537312076-jam-jackpot-highres.jpg",
-    "image/combis/icon_1537434627-Desert-Island__highres.jpg",
-    "image/combis/icon_1537737143-Sabotage__highres.jpg",
-    "image/combis/icon_1537763505-Dark-Rum-and-Coke__highres.jpg",
-    "image/combis/icon_1556010491-Grapefruit-Liqueur-and-Cola__highres.jpg",
-    "image/combis/icon_1556121518-Old-fashioned-w800px.jpg",
-    "image/combis/icon_1557242375-Tequila-Batanga__highres.jpg",
-    "image/combis/icon_1629717664-Whiskey.jpg",
-    "image/combis/images.jpeg",
-    "image/combis/ron cola.jpg",
+    "image/combis/1557247687-Whiskey-Cola__highres1.webp", ,
+    "image/combis/gim tonic.webp",
+    "image/combis/icon_1533143982-Rum-and-Coke__highres.webp",
+    "image/combis/icon_1533144518-Boston-Tea_highres.webp",
+    "image/combis/icon_1536956871-Vodka-with-Sprite__highres.webp",
+    "image/combis/icon_1537312076-jam-jackpot-highres.webp",
+    "image/combis/icon_1537434627-Desert-Island__highres.webp",
+    "image/combis/icon_1537737143-Sabotage__highres.webp",
+    "image/combis/icon_1537763505-Dark-Rum-and-Coke__highres.webp",
+    "image/combis/icon_1556010491-Grapefruit-Liqueur-and-Cola__highres.webp",
+    "image/combis/icon_1556121518-Old-fashioned-w800px.webp",
+    "image/combis/icon_1557242375-Tequila-Batanga__highres.webp",
+    "image/combis/icon_1629717664-Whiskey.webp",
+    "image/combis/images.webp",
+    "image/combis/ron cola.webp",
     
 ]
 const carousel = document.querySelector('.carousel');
@@ -196,7 +196,9 @@ img_c.style.objectFit = "contain";
 let i = 0;
 setInterval(() => {
     if (i < combis.length - 1) {
-        i++;
+        //ramdom
+        i = Math.floor(Math.random() * combis.length);
+        
     } else {
         i = 0;
     }
