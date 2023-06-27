@@ -158,8 +158,8 @@ function nombreUsuario() {
     const user = document.querySelector('.user');
     user.innerHTML = localStorage.getItem('nombre');
 }
-
-// //crear carousel automatico con el array 
+function carro() {
+    
 const combis = [
     "image/combis/1557247687-Whiskey-Cola__highres1.jpg" ,
     "image/combis/gim tonic.jpg",
@@ -181,10 +181,10 @@ const combis = [
 const carousel = document.querySelector('.carousel');
 const img = document.createElement('img');
 img.setAttribute('id', 'img');
-img.setAttribute('class', 'img');
+img.setAttribute('class', 'img__carousel');
 img.setAttribute('src', combis[0]);
 carousel.appendChild(img);
-img.style.height = '100%';
+
 
 //cambiar imgConsumibles automaticamente
 let i = 0;
@@ -197,22 +197,11 @@ setInterval(() => {
     img.setAttribute('src', combis[i]);
 }
     , 2500);
-// dar tamaños
-img.style.width = '40%';
-img.style.height = '50%';
-img.style.objectFit = 'contain';
 
-//animar y dar estilo
-img.addEventListener('mouseover', function () {
-    img.style.transform = 'scale(1.2)';
-    img.style.transition = 'all 1s';
+
+
 }
-);
-img.addEventListener('mouseout', function () {
-    img.style.transform = 'scale(1)';
-    img.style.transition = 'all 1s';
-}
-);
+carro();
 
 
 function scroll() {

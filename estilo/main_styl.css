@@ -184,12 +184,14 @@
 
 .titulo_section_article {
   color: #CD4C0F;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-family: gae;
   text-align: center;
   background-color: #0c6d16;
   border-radius: 500%;
   width: max-content;
+  height: max-content;
+  padding: 3%;
 
 }
 
@@ -228,11 +230,18 @@
   text-transform: uppercase;
 
 }
-/* #combis {
- object-fit: cover;
- width: 100%;
- height: fit-content;
-} */
+
+.carousel{
+  width: 50%;
+  height: 50%;
+  justify-items: center;
+}
+.img__carousel{
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+
+}
 
 .pie {
   width: 100%;
