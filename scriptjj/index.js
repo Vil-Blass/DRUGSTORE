@@ -65,6 +65,23 @@ const imgConsumibles = [
     "image/refrescos/schweppes-naranja.webp", "image/refrescos/mahou-00-tostada.webp", "",
     "", "", "",
     "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
+    "", "", "",
 ];
 //array de precios
 const precios = [
@@ -134,6 +151,7 @@ function imagenes() {
             figcaption.style.padding = '10px';
             figure.appendChild(figcaption);
         });
+
         consumibles.addEventListener('mousemove', function (event) {
             const figure = document.querySelector('#figure');
             if (figure) {
@@ -143,6 +161,7 @@ function imagenes() {
                 figure.style.left = `${x}px`;
                 figure.style.top = `${y}px`;
             }
+            
         });
         consumibles.addEventListener('mouseleave', function () {
             const figure = document.querySelector('.figure');
@@ -151,6 +170,8 @@ function imagenes() {
             }
         });
     });
+    //cerrar figure al transcurrido el tiempo
+
 }
 imagenes();
 //funcion para mostrar el nombre del usuario
@@ -159,52 +180,52 @@ function nombreUsuario() {
     user.innerHTML = localStorage.getItem('nombre');
 }
 function carro() {
-    
-const combis = [
-    "image/combis/1557247687-Whiskey-Cola__highres1.webp", ,
-    "image/combis/gim tonic.webp",
-    "image/combis/icon_1533143982-Rum-and-Coke__highres.webp",
-    "image/combis/icon_1533144518-Boston-Tea_highres.webp",
-    "image/combis/icon_1536956871-Vodka-with-Sprite__highres.webp",
-    "image/combis/icon_1537312076-jam-jackpot-highres.webp",
-    "image/combis/icon_1537434627-Desert-Island__highres.webp",
-    "image/combis/icon_1537737143-Sabotage__highres.webp",
-    "image/combis/icon_1537763505-Dark-Rum-and-Coke__highres.webp",
-    "image/combis/icon_1556010491-Grapefruit-Liqueur-and-Cola__highres.webp",
-    "image/combis/icon_1556121518-Old-fashioned-w800px.webp",
-    "image/combis/icon_1557242375-Tequila-Batanga__highres.webp",
-    "image/combis/icon_1629717664-Whiskey.webp",
-    "image/combis/images.webp",
-    "image/combis/ron cola.webp",
-    
-]
-const carousel = document.querySelector('.carousel');
-const img_c = document.createElement('img');
-img_c.setAttribute('id', 'img_c');
-img_c.setAttribute('class', 'img__c');
-img_c.setAttribute('src', combis[0]);
-carousel.appendChild(img_c);
-//estilo
-img_c.style.width = '100%';
-img_c.style.height = '100%';
-img_c.style.borderRadius = '10px';
-img_c.style.objectFit = "contain";
+
+    const combis = [
+        "image/combis/1557247687-Whiskey-Cola__highres1.webp", ,
+        "image/combis/gim tonic.webp",
+        "image/combis/icon_1533143982-Rum-and-Coke__highres.webp",
+        "image/combis/icon_1533144518-Boston-Tea_highres.webp",
+        "image/combis/icon_1536956871-Vodka-with-Sprite__highres.webp",
+        "image/combis/icon_1537312076-jam-jackpot-highres.webp",
+        "image/combis/icon_1537434627-Desert-Island__highres.webp",
+        "image/combis/icon_1537737143-Sabotage__highres.webp",
+        "image/combis/icon_1537763505-Dark-Rum-and-Coke__highres.webp",
+        "image/combis/icon_1556010491-Grapefruit-Liqueur-and-Cola__highres.webp",
+        "image/combis/icon_1556121518-Old-fashioned-w800px.webp",
+        "image/combis/icon_1557242375-Tequila-Batanga__highres.webp",
+        "image/combis/icon_1629717664-Whiskey.webp",
+        "image/combis/images.webp",
+        "image/combis/ron cola.webp",
+
+    ]
+    const carousel = document.querySelector('.carousel');
+    const img_c = document.createElement('img');
+    img_c.setAttribute('id', 'img_c');
+    img_c.setAttribute('class', 'img__c');
+    img_c.setAttribute('src', combis[0]);
+    carousel.appendChild(img_c);
+    //estilo
+    img_c.style.width = '100%';
+    img_c.style.height = '100%';
+    img_c.style.borderRadius = '10px';
+    img_c.style.objectFit = "contain";
 
 
 
-//cambiar imgConsumibles automaticamente
-let i = 0;
-setInterval(() => {
-    if (i < combis.length - 1) {
-        //ramdom
-        i = Math.floor(Math.random() * combis.length);
-        
-    } else {
-        i = 0;
+    //cambiar imgConsumibles automaticamente
+    let i = 0;
+    setInterval(() => {
+        if (i < combis.length - 1) {
+            //ramdom
+            i = Math.floor(Math.random() * combis.length);
+
+        } else {
+            i = 0;
+        }
+        img_c.setAttribute('src', combis[i]);
     }
-    img_c.setAttribute('src', combis[i]);
-}
-    , 2500);
+        , 2500);
 
 
 
@@ -228,7 +249,7 @@ function scroll() {
     btnScrollTop.style.display = 'none'
     btnScrollTop.style.padding = '10px';
     document.body.appendChild(btnScrollTop);
-    
+
 
     btnScrollTop = document.querySelector('#btnScrollTop');
     window.addEventListener('scroll', () => {

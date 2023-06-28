@@ -1,72 +1,51 @@
+# Jeffry Jaquez Santana
+## + darksnale@gmail.com
+
+
+
 # DRUGSTORE IRISH
+- El objetibo del proyecto es crear una paguina web con un menu interactivo, que en pc muestre un elemento img creado de js para mostrar el articulocon su precio, al pasar el raton, dede dispositivos moviles hacer click. con un boton que aparezca al hacer scroll que te indique ir al inicio de la pantalla.
+
+- creada desde HTML5 con sus elementos principales.
+- donde añadiremos un contenedor para empezar a agrupar los elementos
+- un enlace a un formulario de registro.
+- un login.
+
 
 # CREAR FIGMA. 
+
 ###  (esto es solo orientativo)
 - Aqui se mosdtrara una plantilla del diseño de la pagina.
 - Tanto para movil como para escritori(pc).
-- Las medida a usar seran unas medidas de un minimo de 384.
+- Las medida a usar seran unas medidas de un minimo de 250.
 - Se usaran fuentes agradables y colores calido.
 - Las letras estan en medidas EM.
 ## CATALOGO
 - crear caltalogo de bebidas no alcoholicas.
 + + Zumos y Aguas
 + + Refrescos y Cervezas 00/Sin
-+ + Cafes y tes
++ + Cafes 
+<!-- + + tes -->
 - crear catalogo de bebidas alcoholicas.
 + + Roner
 + + Wishkis
-+ + Ginetas
-+ + Vozcas
-+ + Vinos
+<!-- + + Ginetas -->
+<!-- + + Vozcas -->
+<!-- + + Vinos -->
 + + cervezas
-+ + varios
+<!-- + + varios -->
+- combinados
++ +  un carousel de imagenes de los combinados
 -  crae catalogo de comidas
-+ + platos combinados
+<!-- + + platos combinados -->
 + + Menu de pizzas
 + + Sandwich`s
 + + Bocadillos
 + + Entrantes
-- combinados
+
 - crear footer
-+ + mapa
+<!-- + + mapa -->
 + + redes
 + + contacto
 
-
-
-
-/* Media Queries */
-@media only screen and (min-width: 384px) and (max-width: 4000px) { .container { height: 100vh; }
-
-.header_container { height: 15vh; }
-
-.title_header { height: 15vh; font-size: 0.5em; }
-
-.nav_header { height: 7vh; margin: 0.1%; }
-
-.ul_nav { width: 70%; font-size: 0.6em; }
-
-#fechaDia { width: 25%; font-size: 0.8em; border-radius: 5%; }
-
-.singLogIn { width: 15%; }
-
-.entrando { width: 50%; margin-inline-start: 50%; font-size: 0.4em; }
-
-.section_container { height: 70vh; }
-
-.title_section { height: 50%; font-size: 1em; border-radius: 25%; }
-
-.section_article { padding: 0.5%; border-radius: 5%; }
-
-.titulosectionarticle { font-size: 0.6em; border-radius: 100%; }
-
-.ul_section { font-size: 0.6em; border-radius: 5%; }
-
-.form_reg { grid-template-columns: repeat(1, 1fr); width: 70%; }
-
-.form_reg input { width: 60%; font-size: 0.6em; }
-
-.form_reg label { font-size: 0.6em; } }
-.figure{
-    width: 100%;
-}
+## los campor que faltan se iran interando a requerimiento del cliente.
