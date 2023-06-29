@@ -15,7 +15,15 @@ setInterval(() => {
     const hora12 = (hora % 12) || 12
     const horaAMPM = hora12 + ':' + minutos + ':' + segundos + ' ' + ampm
     fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mes} del ${año} ${horaAMPM}`
-})
+    
+    if ((hora >= 21 && minutos >= 30) || hora < 8) {
+        fechaDia.style.color = 'red';
+      } else {
+        fechaDia.style.color = 'inherit';
+      }
+    
+}, 1000)
+
 //guardar en local
 localStorage.setItem('fechaDia', JSON.stringify(fechaDia));
 
