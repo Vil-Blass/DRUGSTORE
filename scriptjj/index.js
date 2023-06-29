@@ -67,7 +67,7 @@ const imgConsumibles = [
     "image/rones/ron-cacique.webp", "image/rones/ron-havana-club-3-anos.webp", "image/rones/035486_00_1.webp",
     "image/rones/legendario-elixir-de-cuba.webp", "image/rones/ron-pampero.webp", "image/rones/51o45REDFML._AC_SL1500_.webp",
     "image/rones/zacapa-centenario-solera-23-anos.webp", "image/rones/legendario-elixir-de-cuba.webp", "image/whisky/whisky-jack-daniels.webp",
-    "image/whisky/whisky-johnnie-walker-red-40-r2-2115_4.webp", "image/whisky/712Lf-uUu7L.__AC_SY445_SX342_QL70_ML2_.webp", "",
+    "image/whisky/whisky-johnnie-walker-red-40-r2-2115_4.webp", "image/whisky/712Lf-uUu7L.__AC_SY445_SX342_QL70_ML2_.webp", "image/whisky/E219bd87854b645b6a004c0783c5d39c0N.jpg_2200x2200q80.webp",
     "image/whisky/dyc.webp", "image/whisky/91910-Whisky-J_B-Botella-70-cl.webp", "image/whisky/whisky-johnnie-walker-black-label-vinopremier.webp",
     "", "image/whisky/61A+H7B6q+L._AC_SL1200_.webp", "image/whisky/bot-jameson_0.webp",
     "image/whisky/003413.webp", "image/whisky/whisky-glenfiddich-15-anos.webp", "image/licores/orujo-de-cafe-panizo.webp",
@@ -75,7 +75,7 @@ const imgConsumibles = [
     "image/licores/000357_00_2_Bodega.webp", "image/licores/juger.webp", "image/licores/Ee11a15ab0a96480a837596733c1096fdL.jpg_2200x2200q80.webp",
     "image/licores/orujo-de-hierbas-panizo.webp", "image/cerveza/cerveza-heineken-botellin-33cl-pack-24.webp", "image/cerveza/61L1V0J0tCL._AC_SL1500_.webp",
     "image/cerveza/61GEI-A9tzL._AC_SL1500_.webp", "image/cerveza/rs=w 262,h 406.webp", "image/cerveza/00118602800726____2__1200x1200.webp",
-    "image/cerveza/61fxEMmR0-L._AC_SL1366_.webp", "image/cerveza/00118602800916____3__1200x1200.webp", "",
+    "image/cerveza/61fxEMmR0-L._AC_SL1366_.webp", "image/cerveza/00118602800916____3__1200x1200.webp", "image/cerveza/mahou-5-estrellas-botella-33-cl.webp",
     "image/cerveza/san-miguel-selecta-203770.webp", "", "",
     "", "", "",
     "", "", "",
@@ -85,8 +85,9 @@ const imgConsumibles = [
 ];
 //array de precios
 const precios = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50
-];
+    1.5, 1.8, 2.5, 2.8, 3.5, 3.8, 4.5, 4.8, 5.5, 5.8, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5
+    
+]
 //crear funcion  de imagen
 function imagenes() {
     const consumibles = document.querySelectorAll('.consumibles');
