@@ -98,6 +98,39 @@ const imgConsumibles = [
     "", "", "",
     "", "", "",
 ];
+//array para rellenar el alt de img
+const alt = [
+    "Zumo de aceite", "Zumo de arandano", "Zumo de banano", "Zumo de fresa",
+    "Zumo de lima limon", "Zumo de mango", "Zumo de manzana", "Zumo de melocoton",
+    "Zumo de naranja", "Zumo de pera", "Zumo de piña", "Zumo de ponelo",
+    "Zumo de tomate", "Refresco aquabona manantial pena umbria", "Refresco aquabona singular pena umbria",
+    "Cafe solo", "Cafe con leche", "Cafe con hielo", "Cafe con hielo",
+    "Cafe bombon", "Cafe irish", "Cafe descafeinado", "Refresco 7up",
+    "Refresco coca cola", "Refresco coca cola lignt", "Refresco coca cola zero",
+    "Refresco coca cola zero zero", "Refresco aquarius limon", "Refresco aquarius naranja",
+    "Refresco Schweppes tonica", "Refresco Schweppes limon", "Refresco Schweppes naranja",
+    "Refresco Schweppes naranja", "Refresco mahou 00 tostada",
+    "Rones ron barcelo", "Rones brugal anejo", "Rones ron brugal extraviejo",
+    "Rones ron cacique", "Rones ron havana club 3 anos", "Rones 035486_00_1",
+    "Rones legendario elixir de cuba", "Rones ron pampero", "Rones 51o45REDFML._AC_SL1500_.webp",
+    "Rones legendario elixir de cuba", "Rones ron johnnie walker red 40 r2 2115 4",
+    "Rones 712Lf-uUu7L.__AC_SY445_SX342_QL70_ML2_.webp", "Whisky E219bd87854b645b6a004c0783c5d39c0N.jpg_2200x2200q80.webp",
+    "Whisky whisky johnnie walker red 40 r2 2115 4", "Whisky 712Lf-uUu7L.__AC_SY445_SX342_QL70_ML2_.webp",
+    "Whisky whisky johnnie walker black label vinopremier", "", "Whisky bot jameson",
+    "Whisky 003413", "Whisky whisky glenfiddich 15 anos", "Licores orujo de cafe panizo",
+    "Licores licores crema de fresa con tequila teichenne 70 cl", "Licores 70A5070-Editar copia",
+    "Licores juger", "Licores licores 43 31 i1 1879 3", "Licores 000357_00_2 Bodega",
+    "Licores orujo de hierbas panizo", "Cerveza cerveza heineken botellin 33cl pack 24",
+    "Cerveza 61L1V0J0tCL._AC_SL1500_.webp", "Cerveza 61GEI-A9tzL._AC_SL1500_.webp",
+    "Cerveza 00118602800726____2__1200x1200.webp", "Cerveza 61fxEMmR0-L._AC_SL1366_.webp",
+    "Cerveza 00118602800916____3__1200x1200.webp", "Cerveza mahou 5 estrellas botella 33 cl",
+    "Cerveza san miguel selecta 203770", "", "",
+    "", "", "",
+
+    
+]
+
+
 //array de precios
 const precios = [
     1.5, 1.8, 2.5, 2.8, 3.5, 3.8, 4.5, 4.8, 5.5, 5.8, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5
@@ -151,11 +184,11 @@ function imagenes() {
             img.setAttribute('src', imgConsumibles[index]);
             img.setAttribute('class', 'img');
             img.setAttribute('id', 'img');
+            img.setAttribute('alt', alt[index]);
             figure.appendChild(img);
             const figcaption = document.createElement('figcaption');
             figcaption.setAttribute('class', 'figcaption');
             figcaption.innerHTML = precios[index];
-            //estilo
             figcaption.style.position = 'absolute';
             figcaption.style.left = '0';
             figcaption.style.top = '0';
