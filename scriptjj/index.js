@@ -15,13 +15,20 @@ setInterval(() => {
     const hora12 = (hora % 12) || 12
     const horaAMPM = hora12 + ':' + minutos + ':' + segundos + ' ' + ampm
     fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mes} del ${año} ${horaAMPM}`
-    
-    if ((hora >= 21 && minutos >= 30) || hora < 8) {
+
+    if ((diaSemana >= 1 && diaSemana <= 4) && ((hora >= 21 && minutos >= 30) || hora < 8)) {
         fechaDia.style.color = 'red';
-      } else {
-        fechaDia.style.color = 'inherit';
-      }
-    
+    }
+    if ((diaSemana === 5 && hora >= 3) || (diaSemana === 6 && hora < 17)) {
+        fechaDia.style.color = 'red';
+    }
+    if ((diaSemana === 6 && hora >= 3) || (diaSemana === 0) || (diaSemana === 1 && hora < 8)) {
+        fechaDia.style.color = 'red';
+    }
+    else {
+        fechaDia.style.color = 'white';
+    }
+
 }, 1000)
 
 //guardar en local
@@ -70,7 +77,7 @@ const imgConsumibles = [
     "image/refrescos/coca-cola-zero.webp", "image/refrescos/coca-cola-zero-zero.webp",
     "image/refrescos/nestea-te-negro-al-limon.webp", "image/refrescos/aquarius-limon.webp",
     "image/refrescos/aquarius-naranja.webp", "image/refrescos/schweppes-tonica.webp", "image/refrescos/schweppes-limon.webp",
-    "image/refrescos/schweppes-naranja.webp", "image/refrescos/mahou-00-tostada.webp", 
+    "image/refrescos/schweppes-naranja.webp", "image/refrescos/mahou-00-tostada.webp",
     "image/rones/ron-barcelo.webp", "image/rones/brugal-anejo.webp", "image/rones/ron-brugal-extraviejo.webp",
     "image/rones/ron-cacique.webp", "image/rones/ron-havana-club-3-anos.webp", "image/rones/035486_00_1.webp",
     "image/rones/legendario-elixir-de-cuba.webp", "image/rones/ron-pampero.webp", "image/rones/51o45REDFML._AC_SL1500_.webp",
@@ -94,7 +101,7 @@ const imgConsumibles = [
 //array de precios
 const precios = [
     1.5, 1.8, 2.5, 2.8, 3.5, 3.8, 4.5, 4.8, 5.5, 5.8, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5, 12.5
-    
+
 ]
 //crear funcion  de imagen
 function imagenes() {
@@ -170,7 +177,7 @@ function imagenes() {
                 figure.style.left = `${x}px`;
                 figure.style.top = `${y}px`;
             }
-            
+
         });
         consumibles.addEventListener('mouseleave', function () {
             const figure = document.querySelector('.figure');
