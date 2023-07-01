@@ -433,6 +433,19 @@
     font-size: 1em;
   }
 
+  .consumibles {
+    font-size: 1em;
+  }
+
+  .pie {
+    height: auto;
+  }
+
+  .img_redes {
+    width: 50%;
+    height: 50%;
+  }
+
   .container_form {
     height: auto;
   }
@@ -455,4 +468,5 @@
     width: 50%;
     font-size: 1em;
   }
+
 }
