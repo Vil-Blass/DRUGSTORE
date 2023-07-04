@@ -2,11 +2,13 @@
 let fechaDia = document.querySelector('#fechaDia')
 // funcion de relog automatico
 setInterval(() => {
+    //hora de españa
     const fecha = new Date()
     const diaSemana = fecha.getDay()
     const diaSemanaTexto = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']
     const dia = fecha.getDate()
-    const mes = fecha.getMonth()
+    const mes = fecha.getMonth() 
+    const mesTexto = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
     const año = fecha.getFullYear()
     const hora = fecha.getHours()
     const minutos = fecha.getMinutes()
@@ -14,7 +16,7 @@ setInterval(() => {
     const ampm = hora >= 12 ? 'PM' : 'AM'
     const hora12 = (hora % 12) || 12
     const horaAMPM = hora12 + ':' + minutos + ':' + segundos + ' ' + ampm
-    fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mes} del ${año} ${horaAMPM}`
+    fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mesTexto[mes]} del ${año} ${horaAMPM}`
 
     if ((diaSemana >= 1 && diaSemana <= 4) && ((hora >= 21 && minutos >= 30) || hora < 8)) {
         fechaDia.style.color = 'red';
