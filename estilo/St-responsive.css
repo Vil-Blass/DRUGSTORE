@@ -17,13 +17,13 @@
 }
 
 .container {
-    width: 100%;
+    width: 50;
     height: 100vh;
     background-color: #452f27;
 }
 
 .header_container {
-    width: 100%;
+
     height: 30vh;
     display: flex;
     flex-flow: column;
@@ -58,13 +58,14 @@
     border-radius: 25%;
 
     ul {
-        width: 100%;
+        width: 70%;
         height: 100%;
         display: flex;
         flex-flow: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
         padding: 0.5%;
         margin: 1%;
+
 
         li {
             width: 100%;
@@ -83,29 +84,35 @@
     }
 
     time-datetime {
-        width: 100%;
+        width: 10%;
         height: 100%;
+        font-size: 1em;
+        color: #fac353;
+        font-family: duIr;
 
 
     }
 
     article {
-        width: 100%;
+        width: 20%;
         height: 100%;
         display: flex;
         flex-flow: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
+       
 
         a {
+            width: 50%;
             text-decoration: none;
             color: #fac353;
             font-family: duIr;
             font-size: 1em;
         }
-        buttom{
-            width: 100%;
+        button{
+            width: 50%;
             height: 100%;
             background: #0c6d16;
+            color: #fac353;
         }
     }
 }
