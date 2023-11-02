@@ -1,0 +1,139 @@
+/*Diseño siempre para el móvil primero  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: duIr;
+    src: url(../fuentes/IrishGrover-Regular.ttf);
+}
+
+@font-face {
+    font-family: gae;
+    src: url(../fuentes/NotoSansJP-VariableFont_wght.ttf);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #452f27;
+}
+
+.header_container {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-inline-start: 0.1%;
+
+    h1 {
+
+        width: 100%;
+        height: 8vh;
+        text-align: center;
+        font-family: duIr;
+        font-size: 2em;
+        color: #0c6d16;
+        background-color: #fac353;
+        border-radius: 25%;
+       padding-top: 2%;
+    }
+
+
+}
+
+
+
+.nav_header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 12vh;
+    background-color: #0c6d16;
+    border-radius: 25%;
+
+    ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+        padding: 0.5%;
+        margin: 1%;
+
+        li {
+            width: 100%;
+            height: 100%;
+            margin: 1%;
+            list-style-type: none;
+            font-size: 1.em;
+
+            a {
+                text-decoration: none;
+                color: #fac353;
+                font-family: duIr;
+
+            }
+        }
+    }
+
+    time-datetime {
+        width: 100%;
+        height: 100%;
+
+
+    }
+
+    article {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+
+        a {
+            text-decoration: none;
+            color: #fac353;
+            font-family: duIr;
+            font-size: 1em;
+        }
+        buttom{
+            width: 100%;
+            height: 100%;
+            background: #0c6d16;
+        }
+    }
+}
+
+.entrando {
+    display: none;
+    width: 35%;
+    height: 15vh;
+    background-color: #0c6d16;
+    font-size: 0.99em;
+    margin-inline-start: 75%;
+
+}
+
+
+
+
+/*DISEÑO RESPONSIVO*/
+
+
+
+
+
+/* Diseño para Celulares */
+@media screen and (min-width: 360px) {}
+
+/* Diseño para Tablets */
+@media screen and (max-width: 768px) {}
+
+/* Diseño para Tablets */
+@media screen and (max-width: 1024px) {}

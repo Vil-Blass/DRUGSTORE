@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -274,6 +276,16 @@
   width: 30%;
   height: 30%;
 }
+/* media queries para pantallas más pequenas con una resolución de 360 */
+
+@media screen and (max-width: 360px) {
+  .nav_header {
+    height: 12vh;
+    width: auto;
+  }
+
+}
+
 
 /* FORMULARIO */
 
@@ -343,7 +355,6 @@
   font-weight: 200;
 
 }
-
 
 
 /* @media screen and (min-width: 250px) {
