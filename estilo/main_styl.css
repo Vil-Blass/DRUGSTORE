@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 @font-face {
@@ -18,8 +19,6 @@
 
 /* Estilos para pantallas más grandes */
 .container {
-  max-width: min(100%,3140px);
-  height: min(1140px, 100%);
   display: flex;
   flex-flow: column;
   justify-content: center;
