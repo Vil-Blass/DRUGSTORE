@@ -18,7 +18,7 @@
 
 .container {
     width: 50;
-    height: 100vh;
+    height: 620vh;
     background-color: #452f27;
 }
 
@@ -33,14 +33,23 @@
     h1 {
 
         width: 100%;
-        height: 8vh;
+        height: fit-content;
         text-align: center;
         font-family: duIr;
         font-size: 2em;
         color: #0c6d16;
         background-color: #fac353;
         border-radius: 25%;
-       padding-top: 2%;
+        padding-top: 2%;
+        margin-top: 1%;
+    }
+
+    time-datetime {
+
+        height: 100%;
+        font-size: 1em;
+        color: #fac353;
+        font-family: duIr;
     }
 
 
@@ -60,36 +69,37 @@
     ul {
         width: 70%;
         height: 100%;
-        display: flex;
-        flex-flow: row;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-flow: column;
         justify-content: space-between;
         padding: 0.5%;
         margin: 1%;
+
 
 
         li {
             width: 100%;
             height: 100%;
             margin: 1%;
+            padding: 0% 0.5% 0% 10%;
             list-style-type: none;
-            font-size: 1.em;
+            border: #452f27 1px solid;
+            border-radius: 33%;
+
 
             a {
                 text-decoration: none;
                 color: #fac353;
                 font-family: duIr;
+                font-size: 1em;
 
             }
         }
     }
 
     time-datetime {
-        width: 10%;
-        height: 100%;
-        font-size: 1em;
-        color: #fac353;
-        font-family: duIr;
-
+        display: none;
 
     }
 
@@ -99,7 +109,7 @@
         display: flex;
         flex-flow: row;
         justify-content: space-around;
-       
+
 
         a {
             width: 50%;
@@ -107,26 +117,129 @@
             color: #fac353;
             font-family: duIr;
             font-size: 1em;
+            margin-top: 25%;
         }
-        button{
+
+        button {
+            margin-top: 25%;
             width: 50%;
-            height: 100%;
+            height: 50%;
             background: #0c6d16;
             color: #fac353;
+            border-radius: 50%;
+            font-family: duIr;
+            font-size: 1em;
+            border: #452f27 1px solid;
+
         }
     }
 }
 
+
 .entrando {
+    display: flex;
+    flex-flow: column;
     display: none;
-    width: 35%;
-    height: 15vh;
+    width: 42%;
+    height: 20vh;
     background-color: #0c6d16;
     font-size: 0.99em;
-    margin-inline-start: 75%;
+    margin-inline-start: 55%;
+    margin-top: 2%;
+
+    h4 {
+        color: #fac353;
+        font-family: duIr;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        color: #fac353;
+        font-family: duIr;
+        font-size: 1em;
+
+        label {
+            height: 23%;
+            width: 50%;
+        }
+
+        input {
+            width: 95%;
+        }
+    }
 
 }
 
+.section_container {
+    width: 100%;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+
+    h2 {
+        width: 100%;
+        height: fit-content;
+        color: #fac353;
+        font-family: gae;
+        font-size: 2em;
+        text-align: center;
+        background-color: #0c6d16;
+        border-radius: 50%;
+        margin: 2%;
+        
+    }
+
+}
+
+.section_container_section {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    article {
+        width: fit-content;
+        height: 100%;
+        background-color: #0c6d16;
+        padding: 1%;
+        margin: 1%;
+        h3{
+            
+            color:#452f27;
+            font-family: gae;
+            font-size: 1.5em;
+            text-align: center;
+            background-color: #fac353 ;
+        }
+        li{
+            color: #fac353;
+            font-family: duIr;
+            font-size: 1.5em;
+            text-align: center;
+            list-style-type: none;
+
+        }
+
+    }
+
+}
+
+.combis {
+    width: 50%;
+}
+   
+   
 
 
 
@@ -137,7 +250,48 @@
 
 
 /* Diseño para Celulares */
-@media screen and (min-width: 360px) {}
+@media screen and (min-width: 400px) {
+    .title_header {
+
+        h1 {
+            font-size: 3em;
+        }
+
+        time-datetime {
+            display: none;
+
+        }
+    }
+
+    .nav_header {
+        width: 100%;
+        height: 16vh;
+
+        ul {
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            flex-flow: row;
+
+            a {
+                font-size: 2.5em;
+            }
+        }
+
+        time-datetime {
+            text-align: center;
+            display: inline-block;
+            font-size: 1.5em;
+            width: 30%;
+            color: #fac353;
+            font-family: duIr;
+            border: #452f27 1px solid;
+        }
+    }
+
+
+}
+
 
 /* Diseño para Tablets */
 @media screen and (max-width: 768px) {}
