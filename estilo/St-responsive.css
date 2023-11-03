@@ -413,15 +413,42 @@
 
 /* Diseño para Tablets */
 @media screen and (min-width: 1024px)  {
-    .container_form {
-        width: 100%;
-        height: 50vh;
+    .container {
+        
+        height: 310vh;
+    }
+    .nav_header {
+        ul{ grid-template-columns: repeat(4, 1fr);
+            li{
+               
+                background-color: #452f27;
+
+                a{padding: 1%;
+                    margin-top: 1.5%;
+                    text-align: center;
+                    font-size: 1.7em;
+                }
+            }
+        }
     }
     .section_container_section {
         grid-template-columns: repeat(4, 1fr);
 
+        section {
+            margin: 2%;
+            
+            article {
+                margin: 0 auto;
+            }
+        }
+
     }
 .combis {
     width: 10%;
+}
+.pie {
+    display: grid;
+    height: 12vh;
+    grid-template-columns: repeat(2, 1fr);
 }
 }

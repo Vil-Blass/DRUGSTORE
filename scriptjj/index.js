@@ -1,6 +1,6 @@
 //mostrar la hora y la fecha local en fechaDia
 let fechaDia = document.querySelector('#fechaDia')
-let reloj = document.querySelector('#fechaDia1') 
+let reloj = document.querySelector('#fechaDia1')
 // funcion de relog automatico
 setInterval(() => {
     //hora de españa
@@ -8,14 +8,17 @@ setInterval(() => {
     const diaSemana = fecha.getDay()
     const diaSemanaTexto = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']
     const dia = fecha.getDate()
-    const mes = fecha.getMonth() 
+    const mes = fecha.getMonth()
     const mesTexto = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-    const año = fecha.getFullYear()
-    const hora = fecha.getHours()
-    const minutos = fecha.getMinutes()
-    const segundos = fecha.getSeconds()
+    const año = fecha.getFullYear('es-ES')
+    let hora = fecha.getHours()
+    hora = hora < 10 ? '0' + hora : hora
+    let minutos = fecha.getMinutes()
+    minutos = minutos < 10 ? '0' + minutos : minutos
+    let segundos = fecha.getSeconds()
+    segundos = segundos < 10 ? '0' + segundos : segundos
     const ampm = hora >= 12 ? 'PM' : 'AM'
-    const hora12 = (hora % 12) || 12
+    const hora12 = (hora % 24) || 24
     const horaAMPM = hora12 + ':' + minutos + ':' + segundos + ' ' + ampm
     fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mesTexto[mes]} del ${año} ${horaAMPM}`
     fechaDia1.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mesTexto[mes]} del ${año} ${horaAMPM}`
@@ -136,7 +139,7 @@ const alt = [
     "Cerveza san miguel selecta 203770", "", "",
     "", "", "",
 
-    
+
 ]
 
 
