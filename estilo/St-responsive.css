@@ -360,7 +360,7 @@
 
 
 /* Diseño para Celulares */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 458px) {
     .header_container {
         article {
 
