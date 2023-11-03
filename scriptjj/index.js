@@ -1,5 +1,6 @@
 //mostrar la hora y la fecha local en fechaDia
 let fechaDia = document.querySelector('#fechaDia')
+let reloj = document.querySelector('#fechaDia1') 
 // funcion de relog automatico
 setInterval(() => {
     //hora de españa
@@ -17,24 +18,30 @@ setInterval(() => {
     const hora12 = (hora % 12) || 12
     const horaAMPM = hora12 + ':' + minutos + ':' + segundos + ' ' + ampm
     fechaDia.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mesTexto[mes]} del ${año} ${horaAMPM}`
+    fechaDia1.innerHTML = `${diaSemanaTexto[diaSemana]}, ${dia} de ${mesTexto[mes]} del ${año} ${horaAMPM}`
 
     if ((diaSemana >= 1 && diaSemana <= 4) && ((hora >= 21 && minutos >= 30) || hora < 8)) {
         fechaDia.style.color = 'red';
+        fechaDia1.style.color = 'red';
     }
     if ((diaSemana === 5 && hora >= 3) || (diaSemana === 6 && hora < 17)) {
         fechaDia.style.color = 'red';
+        fechaDia1.style.color = 'red';
     }
     if ((diaSemana === 6 && hora >= 3) || (diaSemana === 0) || (diaSemana === 1 && hora < 8)) {
         fechaDia.style.color = 'red';
+        fechaDia1.style.color = 'red';
     }
     else {
         fechaDia.style.color = 'white';
+        fechaDia1.style.color = 'white';
     }
 
 }, 1000)
 
 //guardar en local
 localStorage.setItem('fechaDia', JSON.stringify(fechaDia));
+localStorage.setItem('fechaDia1', JSON.stringify(fechaDia1));
 
 
 const entrando = document.querySelector('.entrando')
